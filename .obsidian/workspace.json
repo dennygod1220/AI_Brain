@@ -1,0 +1,244 @@
+{
+  "main": {
+    "id": "1f752b746dc44978",
+    "type": "split",
+    "children": [
+      {
+        "id": "6877d0419824bcdc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4ad42720a9bb5a7f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "index"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "507a1f61238b349a",
+    "type": "split",
+    "children": [
+      {
+        "id": "177d6cf53caa3cf8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "54df09cd08c4bbf9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "檔案瀏覽器"
+            }
+          },
+          {
+            "id": "a3765661f7337bf9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜尋"
+            }
+          },
+          {
+            "id": "8daf8253a94c4235",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "書籤"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 417.5
+  },
+  "right": {
+    "id": "d975738158217c84",
+    "type": "split",
+    "children": [
+      {
+        "id": "12606451cfcce1fb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c34ce081abc0fe0b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Hermes_ComfyUI_Workflow_Plugin_程式碼分析.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Hermes_ComfyUI_Workflow_Plugin_程式碼分析 的反向連結"
+            }
+          },
+          {
+            "id": "fe32bbdb03b68f42",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Hermes_ComfyUI_Workflow_Plugin_程式碼分析.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Hermes_ComfyUI_Workflow_Plugin_程式碼分析 的對外連結"
+            }
+          },
+          {
+            "id": "8f46d6c78889db45",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "標籤"
+            }
+          },
+          {
+            "id": "5888e5451d0f3748",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "所有屬性"
+            }
+          },
+          {
+            "id": "c4029eec377c703a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "SillyTavern/Extension/GuidedGenerations追蹤器功能說明 1.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "GuidedGenerations追蹤器功能說明 1 的大綱"
+            }
+          },
+          {
+            "id": "99ba822630b95de8",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 425.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:開啟快速切換": false,
+      "graph:查看關聯圖": false,
+      "canvas:建立新畫布": false,
+      "daily-notes:開啟今天的每日筆記": false,
+      "templates:插入模板": false,
+      "command-palette:開啟命令面板": false,
+      "bases:建立新的 base": false,
+      "copilot:Open Copilot Chat": false
+    }
+  },
+  "active": "4ad42720a9bb5a7f",
+  "lastOpenFiles": [
+    "SCHEMA.md",
+    "raw/articles/Hermes_ComfyUI_Workflow_Plugin_Analysis.md",
+    "entities/plugins/comfyui-workflow/ANALYSIS.md",
+    "index.md",
+    "raw/articles/hermes-agent-comfyui-workflow-plugin-analysis.md",
+    "log.md",
+    "entities/plugins/comfyui-workflow",
+    "entities/plugins",
+    "concepts/safe-execution-workflow.md",
+    "附件/Pasted image 20260407221026.png",
+    "附件/Pasted image 20260407221234.png",
+    "附件/Pasted image 20260407221738.png",
+    "附件/Pasted image 20260407222213.png",
+    "附件/Pasted image 20260408060904.png",
+    "附件/Pasted image 20260409140025.png",
+    "附件/Pasted image 20260409140434.png",
+    "raw/articles/未命名.md",
+    "entities/skills/safe-execution-workflow/SKILL.md",
+    "raw/articles/Hermes Agent 終端機防爆與日誌管理指南.md",
+    "concepts/tool-error-guard.md",
+    "entities/skills/safe-execution-workflow",
+    "concepts/safe-terminal-execution.md",
+    "entities/skills/tool-error-guard/SKILL.md",
+    "entities/skills/tool-error-guard",
+    "entities/skills/safe-terminal-execution/SKILL.md",
+    "entities/skills/safe-terminal-execution",
+    "entities/skills",
+    "Clippings/Can anyone give me a preset for Gemma 4 26b.md",
+    "raw/articles/I've been obsessing over long-form RP for months and built an open-source tool around what I've learned. Looking for testers who care about narrative quality as much as I do.    我幾個月來一直沉迷於長篇角色扮演遊戲，並根據我的研究成果開發了一個開源工具。我正在尋找和我一樣重視敘事品質的測試人員。.md",
+    "SillyTavern/STscript 语言参考  SillyTavern傻酒馆中文文档.md",
+    "Extension/GuidedGenerations追蹤器功能說明 1.md",
+    "copilot/copilot-conversations/Content_Accessibility_Check@20260407_135734.md",
+    "TopstepX/0408 日盤.md",
+    "TopstepX/附件/Pasted image 20260408061254.png",
+    "TopstepX/附件",
+    "Extension/GuidedGenerations追蹤器功能說明.md",
+    "Extension/GuidedGenerations-Extension_分析報告.md",
+    "Extension",
+    "SillyTavern/新增資料夾",
+    "SillyTavern/GuidedGenerations-Extension_分析報告.md",
+    "SillyTavern",
+    "GuidedGenerations-Extension_分析報告.md",
+    "TopstepX/0407夜盤.md",
+    "copilot/copilot-custom-prompts/Clip Web Page.md"
+  ]
+}
