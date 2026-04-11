@@ -4,7 +4,6 @@ description: "Wiki structure, conventions, and taxonomy rules"
 version: 1.1.1
 updated: 2026-04-09
 ---
-
 # Wiki Schema
 
 ## Domain
@@ -71,6 +70,24 @@ updated: 2026-04-09
     └── {YYYYMMDD_HHMMSS}.log     ← 完整錯誤訊息（太長時）
 ```
 
-## Update Policy
+## Archive Policy
 - 若發現矛盾，請在頁面中註明兩者觀點並標記日期
 - 所有的變動必須記錄在 `log.md`
+
+### 來源歸檔規則（Source Archiving）
+
+當 Layer 1 原始來源已完成消化（已轉化為 Layer 2 wiki 頁面並建立 cross-reference），應移至 `_archive/raw/`：
+
+```
+_raw/ sources that have been fully digested → _archive/raw/
+```
+
+判斷標準：
+- 來源的關鍵資訊已存在於 Layer 2 wiki 頁面
+- wiki 頁面的 `sources` frontmatter 已註明該原始檔案
+- 不再需要以原始檔案為起點查詢
+
+歸檔時：
+1. 在 `_archive/raw/` 下保留原始檔案結構（`articles/`, `papers/`, `transcripts/`）
+2. 不更新 wiki 頁面的 `sources` frontmatter（指向歸檔後的路徑）
+3. 在 `log.md` 記錄歸檔動作

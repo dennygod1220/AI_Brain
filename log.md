@@ -1,8 +1,8 @@
---- 
+---
 name: log
 description: "Chronological record of all wiki actions"
-version: 1.0.0
-updated: 2026-04-08
+version: 1.0.1
+updated: 2026-04-12
 ---
 
 # Wiki Log
@@ -69,3 +69,10 @@ updated: 2026-04-08
 - 合併後刪除：entities/skills/safe-terminal-execution/, entities/skills/tool-error-guard/
 - 新增日誌架構：execute_log/ + output_cache/ + error_cache/
 - 更新 SCHEMA.md：version 1.1.0，新增 Agent Log 目錄結構章節
+
+## [2026-04-12] fix | 修復重複檔案：illustrious-prompt-generation-strategy
+- 刪除空白的 concepts/illustrious-prompt-generation-strategy.md
+- 將 entities/concepts/illustrious_prompt_generation_strategy.md 內容合併至正確位置
+- 新增完整 Frontmatter（SCHEMA v1.1.1 規範）
+- 刪除錯誤的 entities/concepts/ 目錄
+- 更新 index.md (v1.0.2)，更新 log.md

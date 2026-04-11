@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "concepts/illustrious-prompt-generation-strategy.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "illustrious-prompt-generation-strategy"
             }
           }
         ]
@@ -196,15 +196,24 @@
   },
   "active": "4ad42720a9bb5a7f",
   "lastOpenFiles": [
+    "concepts/illustrious-prompt-guide.md",
+    "concepts/illustrious-prompt-generation-strategy.md",
     "SCHEMA.md",
-    "raw/articles/Hermes_ComfyUI_Workflow_Plugin_Analysis.md",
-    "entities/plugins/comfyui-workflow/ANALYSIS.md",
-    "index.md",
-    "raw/articles/hermes-agent-comfyui-workflow-plugin-analysis.md",
     "log.md",
+    "index.md",
+    "entities/concepts/illustrious_prompt_generation_strategy.md",
+    "_archive/raw/articles/illustrious-prompt-guide-2026-04-09.md",
+    "entities/concepts",
+    "_archive/raw/articles/Hermes_ComfyUI_Workflow_Plugin_Analysis.md",
+    "_archive/raw/articles",
+    "_archive/raw",
+    "raw/articles/illustrious-prompt-guide-2026-04-09.md",
+    "raw/articles/Hermes_ComfyUI_Workflow_Plugin_Analysis.md",
+    "concepts/safe-execution-workflow.md",
+    "entities/plugins/comfyui-workflow/ANALYSIS.md",
+    "raw/articles/hermes-agent-comfyui-workflow-plugin-analysis.md",
     "entities/plugins/comfyui-workflow",
     "entities/plugins",
-    "concepts/safe-execution-workflow.md",
     "附件/Pasted image 20260407221026.png",
     "附件/Pasted image 20260407221234.png",
     "附件/Pasted image 20260407221738.png",
@@ -230,15 +239,6 @@
     "copilot/copilot-conversations/Content_Accessibility_Check@20260407_135734.md",
     "TopstepX/0408 日盤.md",
     "TopstepX/附件/Pasted image 20260408061254.png",
-    "TopstepX/附件",
-    "Extension/GuidedGenerations追蹤器功能說明.md",
-    "Extension/GuidedGenerations-Extension_分析報告.md",
-    "Extension",
-    "SillyTavern/新增資料夾",
-    "SillyTavern/GuidedGenerations-Extension_分析報告.md",
-    "SillyTavern",
-    "GuidedGenerations-Extension_分析報告.md",
-    "TopstepX/0407夜盤.md",
-    "copilot/copilot-custom-prompts/Clip Web Page.md"
+    "TopstepX/附件"
   ]
 }
