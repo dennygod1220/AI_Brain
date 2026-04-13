@@ -208,6 +208,7 @@ ${PROFILE_DIR}/artifacts/任務名稱_$(date +%Y%m%d).md
 5. **用戶說「繼續」才繼續** — 在 Early Abort 之後，必須等用戶明確指示
 6. **Fallback 是新的開始** — 切換工具時，retry cap 重置為 1
 7. **所有路徑必須 Profile-Aware** — 嚴禁寫入全域目錄
+8. **`patch` 的 `old_string` 範圍過大會意外覆蓋相鄰內容** — 執行前先 `read_file` 確認精確範圍，堅守「最小精確匹配」原則；若不確定，先单独 `read_file` 確認精確行號再用
 
 ---
 

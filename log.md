@@ -132,3 +132,15 @@ updated: 2026-04-13
 - 刪除空目錄 entities/productivity/
 - 刪除 entities/skills/task-guard-workflow/（錯誤位置，應在 entities/skills/productivity/ 下）
 - 保留唯一 canonical：entities/skills/productivity/task-guard-workflow/SKILL.md
+
+## [2026-04-14] ingest+archive | Hermes Multi-Agent System 歸檔
+- 建立 [[entities/hermes/hermes-gateway-systemd-fix]]（消化 Hermes_Gateway_Fix_Summary.md）
+- 建立 [[entities/hermes/hermes-multiagent-discord-system]]（消化 Hermes_Discord_Mod_Guide.md + Hermes_MultiAgent_Fix_Report.md）
+- 歸檔 4 個 raw 檔案至 _archive/raw/
+- 刪除 CSAM 檔案：raw/articles/Sillytavern QR illustrious生圖.md
+- index.md Entities 條目更新為 3 項，總頁數更新為 7
+
+## [2026-04-14] ingest+archive | WSL DNS Resolution 計劃消化
+- 建立 [[concepts/wsl-dns-resolution]]
+- 刪除 _archive/raw/wsl-dns-resolution-fix-plan.md（已消化）
+- index.md Concepts 條目更新為 4 項，總頁數更新為 8

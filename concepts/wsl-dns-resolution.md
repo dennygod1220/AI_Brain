@@ -1,41 +1,42 @@
 ---
-name: wsl-dns-resolution
-description: WSL DNS 解析問題修復方案與配置指南
-version: 1.0.0
-created: 2026-04-13
-updated: 2026-04-13
+title: WSL DNS Resolution Fix
+created: 2026-04-14
+updated: 2026-04-14
 type: concept
-tags: [WSL, Networking, DNS, Fix]
-sources: ['_archive/raw/wsl-dns-resolution-fix-plan.md']
+tags: [WSL, DNS, Network, Windows]
+sources: []
 ---
 
 # WSL DNS Resolution Fix
 
-## Problem
-WSL (Windows Subsystem for Linux) default DNS resolver, which is bridged from the Windows host, often fails to resolve specific domains (e.g., Cloudflare tunnels like `*.trycloudflare.com`).
+## 問題
+WSL 預設使用 Windows Host 的 DNS 解析器，無法解析某些外部域名（如 `*.trycloudflare.com`）。
 
-## Solution
-To bypass the automatic DNS generation, we must disable the automatic generation of `/etc/resolv.conf` and set a static configuration.
+## 解法
+將 WSL 設定為使用公共 DNS 伺服器，繞過 Windows Host DNS 代理。
 
-### 1. Modify `/etc/wsl.conf`
-Add the following configuration to prevent WSL from automatically regenerating `/etc/resolv.conf` with the Windows host IP:
-
+### 步驟 1：停用自動生成 resolv.conf
+修改 `/etc/wsl.conf`：
 ```ini
 [network]
 generateResolvConf = false
 ```
 
-### 2. Modify `/etc/resolv.conf`
-Replace the auto-generated file with a static one pointing to reliable public DNS servers:
-
+### 步驟 2：替換為靜態 DNS
+修改 `/etc/resolv.conf`：
 ```text
 nameserver 1.1.1.1
 nameserver 8.8.8.8
 ```
 
-## Verification
-1. Run `ping <domain>` to check connectivity.
-2. Run `curl -I https://<domain>/v1/models` to verify API accessibility.
+## 驗證
+```bash
+ping properties-evaluating-hearts-represents.trycloudflare.com
+curl -I https://properties-evaluating-hearts-represents.trycloudflare.com/v1/models
+```
 
-> [!IMPORTANT]
-> Since automatic generation is disabled, you must manually update `/etc/resolv.conf` if you switch to networks (like corporate VPNs) that require specific DNS servers.
+## 注意事項
+停用自動生成後，更換網路（如從家用 Wi-Fi 切到公司 VPN）需手動更新 `/etc/resolv.conf`。
+
+## 相關頁面
+- [[entities/hermes/hermes-gateway-systemd-fix]] — 相關 Systemd/WSL 環境問題

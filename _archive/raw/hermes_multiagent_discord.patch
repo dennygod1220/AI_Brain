@@ -1,0 +1,93 @@
+diff --git a/gateway/platforms/discord.py b/gateway/platforms/discord.py
+index 43a9338d..346c060d 100644
+--- a/gateway/platforms/discord.py
++++ b/gateway/platforms/discord.py
+@@ -582,7 +582,18 @@ class DiscordAdapter(BasePlatformAdapter):
+                     if allow_bots == "none":
+                         return
+                     elif allow_bots == "mentions":
+-                        if not self._client.user or self._client.user not in message.mentions:
++                        # Updated to handle role mentions as well:
++                        _self_mentioned = (
++                            self._client.user is not None
++                            and (
++                                self._client.user in message.mentions
++                                or (
++                                    message.guild
++                                    and any(r in message.role_mentions for r in message.guild.me.roles)
++                                )
++                            )
++                        )
++                        if not _self_mentioned:
+                             return
+                     # "all" falls through to handle_message
+                 
+@@ -598,14 +609,38 @@ class DiscordAdapter(BasePlatformAdapter):
+                 if not isinstance(message.channel, discord.DMChannel) and message.mentions:
+                     _self_mentioned = (
+                         self._client.user is not None
+-                        and self._client.user in message.mentions
++                        and (
++                            self._client.user in message.mentions
++                            or (
++                                message.role_mentions
++                                and any(role for role in message.role_mentions if role.id in [r.id for r in message.guild.me.roles])
++                            )
++                        )
+                     )
+                     _other_bots_mentioned = any(
+-                        m.bot and m != self._client.user
++                        (m.bot and m != self._client.user)
+                         for m in message.mentions
+                     )
+-                    # If other bots are mentioned but we're not → not for us
+-                    if _other_bots_mentioned and not _self_mentioned:
++                    
++                    # Instead of members cache, check if any mentioned role ID is NOT one of ours
++                    _other_bot_roles_mentioned = False
++                    if message.guild and message.role_mentions:
++                        my_role_ids = [r.id for r in message.guild.me.roles]
++                        for role in message.role_mentions:
++                            if role.id not in my_role_ids:
++                                # Check if the role is managed by another bot
++                                if role.tags and role.tags.bot_id and self._client.user and role.tags.bot_id != self._client.user.id:
++                                    _other_bot_roles_mentioned = True
++                                    break
++                                # Fallback: If role name contains common agent names that aren't ours
++                                my_name = self.name.lower()
++                                role_name = role.name.lower()
++                                if any(name in role_name for name in ["蝦蝦", "蝦搬", "小低能"]) and my_name not in role_name:
++                                    _other_bot_roles_mentioned = True
++                                    break
++
++                    # If other bots (or their roles) are mentioned but we're not → not for us
++                    if (_other_bots_mentioned or _other_bot_roles_mentioned) and not _self_mentioned:
+                         return
+                     # If humans are mentioned but we're not → not for us
+                     # (preserves old DISCORD_IGNORE_NO_MENTION=true behavior)
+@@ -2033,6 +2068,25 @@ class DiscordAdapter(BasePlatformAdapter):
+ 
+         try:
+             thread = await message.create_thread(name=thread_name, auto_archive_duration=1440)
++            
++            # Automatically invite mentioned users and members of mentioned roles to ensure they can see the thread
++            if thread:
++                # Invite mentioned users
++                for mention in message.mentions:
++                    if self._client.user and mention != self._client.user:
++                        try:
++                            await thread.add_user(mention)
++                        except Exception: pass
++                
++                # Invite members of mentioned roles
++                if message.guild and message.role_mentions:
++                    for role in message.role_mentions:
++                        for member in role.members:
++                            if self._client.user and member != self._client.user:
++                                try:
++                                    await thread.add_user(member)
++                                except Exception: pass
++                                
+             return thread
+         except Exception as e:
+             logger.warning("[%s] Auto-thread creation failed: %s", self.name, e)
