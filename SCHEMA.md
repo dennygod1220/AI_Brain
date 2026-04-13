@@ -1,8 +1,8 @@
 ---
 name: SCHEMA
 description: "Wiki structure, conventions, and taxonomy rules"
-version: 1.1.1
-updated: 2026-04-09
+version: 1.2.0
+updated: 2026-04-13
 ---
 # Wiki Schema
 
@@ -36,6 +36,7 @@ updated: 2026-04-09
 - #safe-execution: 安全執行規範、工作流程優化、工具使用守則
 - #workflow: 重複性任務的標準作業流程 (SOP)
 - #tool-error: 工具錯誤處理、重試防護、迴圈偵測
+- #extension: 軟體擴充套件研究與分析（SillyTavern 等）
 
 ### 自動擴充標籤 (Auto-generated)
 - (將由 Agent 根據內容動態新增)
@@ -57,6 +58,62 @@ updated: 2026-04-09
 | `_archive/` | 已過時的內容 |
 
 > `entities/skills/` 下的 SKILL.md 保持標準格式，複製到 `.hermes/skills/` 可直接使用。
+
+## Hermes Skill SKILL.md 格式規範（歸檔時必須遵守）
+
+### 標準 Frontmatter 欄位
+
+```yaml
+---
+name: {skill-name}                    # 必填：技能識別名（小寫、連字符）
+category: {category}                  # 必填：分類（如 productivity, mlops, devops 等）
+description: {description}            # 必填：一行說明（觸發時 agent 可見）
+version: 1.0.0                       # 建議填寫：語義化版本
+author: Hermes Agent                  # 建議填寫：作者
+license: MIT                          # 建議填寫：授權
+metadata:
+  hermes:
+    tags: [tag1, tag2, tag3]          # 觸發關鍵字（精準、可被 agent 匹配）
+    related_skills: [skill-a, skill-b] # 相關技能名稱陣列
+prerequisites:                        # 條件式（有需要才加）
+  commands: [cmd1, cmd2]             # 需要預裝的 shell 指令
+  env_vars: [VAR1, VAR2]             # 需要預設的環境變數
+---
+```
+
+### 欄位說明
+
+| 欄位 | 必要性 | 說明 |
+|------|--------|------|
+| `name` | **必填** | 小寫、連字符，與目錄名一致 |
+| `category` | **必填** | 上層分類目錄名 |
+| `description` | **必填** | 一行描述，agent 據此判斷是否觸發 |
+| `version` | 建議 | 語義化版本，預設 `1.0.0` |
+| `author` | 建議 | `Hermes Agent` 或 `community` |
+| `license` | 建議 | `MIT` |
+| `metadata.hermes.tags` | **建議** | 觸發關鍵字，影響 skill 匹配 |
+| `metadata.hermes.related_skills` | 可選 | 相關技能名稱陣列 |
+| `prerequisites.commands` | 條件式 | 需要預裝的指令（如 `pygount`、`gh`） |
+| `prerequisites.env_vars` | 條件式 | 需要設定的環境變數（如 `NOTION_API_KEY`） |
+
+### tags 命名原則
+
+- 使用大寫開頭的駝峰式（如 `GitHub`、`Code-Review`）
+- 避免太泛的標籤（如 `workflow`、`productivity`），用更具體的（如 `safe-execution`、`retry-guard`）
+- 每個 skill 控制在 3~7 個標籤
+
+### 歸檔檢查清單
+
+當從 `raw/` 消化歸檔一個 skill 到 `entities/skills/` 時：
+
+- [ ] `name` 與目錄名一致
+- [ ] `category` 正確
+- [ ] `description` 為一行，說明用途
+- [ ] `version` 已填寫
+- [ ] `metadata.hermes.tags` 已填寫（使用駝峰式）
+- [ ] `metadata.hermes.related_skills` 已填寫（如適用）
+- [ ] `prerequisites` 已填寫（如適用）
+- [ ] 正文結構包含 `## Trigger Conditions`、`## Pitfalls` 等標準章節
 
 ## Agent Log 目錄結構（Hermes 專用）
 

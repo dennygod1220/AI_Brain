@@ -1,12 +1,12 @@
 ---
 name: Safe Execution Workflow
-description: 安全執行工作流 — 終端指令輸出防護、工具錯誤重試防護、錯誤訊息摘要防護，三層合一
-version: 1.0.0
+description: 安全執行工作流 — Profile-Aware 狀態機 + 終端輸出防護 + 工具錯誤防護 + Artifact 產出，三層合一
+version: 1.1.0
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-13
 type: concept
-tags: [productivity, safe-execution, tool-error, output-log, error-sanitizer, workflow]
-sources: [hermes-skill]
+tags: [productivity, safe-execution, tool-error, output-log, error-sanitizer, workflow, state-machine, profile-aware, artifact]
+sources: [hermes-skill, raw/articles/Safe Mission Workflow (狀態機與安全執行工作流)]
 ---
 
 # Safe Execution Workflow（安全執行工作流）
@@ -114,6 +114,50 @@ sources: [hermes-skill]
 | `[ABORT]` | 達到中止條件 |
 | `[FALLBACK]` | 切換到備援工具 |
 | `[SUCCESS]` | 任務完成 |
+
+---
+
+## Profile-Aware 狀態機（Profile-Aware Planner）
+
+每次收到新任務，**必須**先建立專屬架構與狀態模板（Profile-Aware）：
+
+```
+PROFILE_NAME="你的_profile_名稱"
+PROFILE_DIR="$HOME/.hermes/profiles/${PROFILE_NAME}"
+
+# 建立專屬目錄
+mkdir -p ${PROFILE_DIR}/logs/execute_log ${PROFILE_DIR}/logs/output_cache \
+         ${PROFILE_DIR}/logs/error_cache ${PROFILE_DIR}/state ${PROFILE_DIR}/artifacts
+
+# 若狀態檔不存在，自動建立模板
+if [ ! -f "${PROFILE_DIR}/state/current_mission.md" ]; then
+cat << 'EOF' > ${PROFILE_DIR}/state/current_mission.md
+# 任務目標：[請在此填寫]
+
+## 待辦清單 (Checklist)
+- [ ] 步驟 1：(詳細說明)
+- [ ] 步驟 2：(詳細說明)
+
+## 執行日誌 (Execution Log)
+- (留白，用於記錄每次行動的關鍵結果)
+EOF
+fi
+```
+
+**Read-Execute-Update Loop：**
+1. 行動前讀取 `current_mission.md`，意識到自己在哪一步
+2. 完成後**強制實體打勾**（使用 `mcp_write_file` 將 `- [ ]` 改為 `- [x]`）
+3. 若出錯中斷，將錯誤寫入該檔案，下次對話時先讀取接續執行
+
+---
+
+## Artifact 產出（任務收尾）
+
+當所有步驟打勾完成後，**必須**將最終結果寫入實體報告：
+
+```
+${PROFILE_DIR}/artifacts/任務名稱_$(date +%Y%m%d).md
+```
 
 ---
 
