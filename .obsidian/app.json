@@ -1,5 +1,6 @@
 {
   "showLineNumber": false,
   "attachmentFolderPath": "./附件",
-  "showUnsupportedFiles": false
+  "showUnsupportedFiles": false,
+  "promptDelete": false
 }

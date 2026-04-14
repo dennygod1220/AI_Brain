@@ -148,3 +148,20 @@ updated: 2026-04-13
 - /root/.hermes/skills/ → AI Brain 覆蓋同步
 - version 2.0.0 → 3.0.0
 - index.md 版本描述已更新
+## [2026-04-15] ingest | raw/articles/SOUL.md靈魂 - converted to Layer2 pages
+- Created concepts/soul-md.md
+- Created entities/skills/agent-soul/SKILL.md
+
+## [2026-04-15] update | entities/skills/agent-soul/SKILL.md frontmatter name updated to agent-soul
+- Previous: name=soul
+- New: name=agent-soul
+
+## [2026-04-15] archive | raw/articles/SOUL.md靈魂
+- Moved to _archive/raw/articles/SOUL.md靈魂
+- Files:
+  - SOUL.md — What Makes an AI, Itself.md
+  - 驯龙高手系列1 给你的小龙虾注入灵魂SOUL.md 详解.md
+
+## [2026-04-15] archive-update | concepts/soul-md.md sources updated to _archive paths
+- Updated frontmatter sources to point to _archive/raw/articles/SOUL.md靈魂
+
