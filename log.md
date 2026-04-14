@@ -144,3 +144,7 @@ updated: 2026-04-13
 - 建立 [[concepts/wsl-dns-resolution]]
 - 刪除 _archive/raw/wsl-dns-resolution-fix-plan.md（已消化）
 - index.md Concepts 條目更新為 4 項，總頁數更新為 8
+## [2026-04-14] sync | task-guard-workflow v3.0.0 sync
+- /root/.hermes/skills/ → AI Brain 覆蓋同步
+- version 2.0.0 → 3.0.0
+- index.md 版本描述已更新
