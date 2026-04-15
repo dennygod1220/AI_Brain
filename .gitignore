@@ -1,3 +1,16 @@
+# Obsidian
+.obsidian/
+
+# Schema-defined tracked dirs only: concepts/, entities/, raw/, _meta/, _archive/
+
+# Non-schema directories
+Extension/
+SillyTavern/
+copilot/
+docs/
+queries/
+comparisons/
+附件/
+
+# Plans (generated, not part of wiki)
 docs/plans/*
-# ignore copilot plugin data
-.obsidian/plugins/copilot/
