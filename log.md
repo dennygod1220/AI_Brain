@@ -2,8 +2,10 @@
 name: log
 description: "Chronological record of all wiki actions"
 version: 1.1.0
-updated: 2026-04-13
+updated: 2026-04-15
 ---
+
+## 2026-04-15
 
 # Wiki Log
 
@@ -177,3 +179,8 @@ updated: 2026-04-13
   - `tags: [research, list]` → `tags: [resource]`
   - index.md 新增 Research 區段與條目
 - index.md 已同步更新
+
+## [2026-04-15] create | 短篇故事：舊唱片的餘溫
+- 新增 `entities/stories/warm-echoes-of-old-records.md`（4 scenes + AI 生圖）
+- index.md Entities 區段已新增條目
+- 故事圖片路徑：`\\wsl.localhost\Ubuntu\root\koboldcpp-config\Hermes\data\temp_outputs\`

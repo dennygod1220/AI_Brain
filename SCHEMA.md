@@ -1,8 +1,8 @@
 ---
 name: SCHEMA
 description: "Wiki structure, conventions, and taxonomy rules"
-version: 1.2.0
-updated: 2026-04-13
+version: 1.3.0
+updated: 2026-04-15
 ---
 # Wiki Schema
 
@@ -37,6 +37,7 @@ updated: 2026-04-13
 - #workflow: 重複性任務的標準作業流程 (SOP)
 - #tool-error: 工具錯誤處理、重試防護、迴圈偵測
 - #extension: 軟體擴充套件研究與分析（SillyTavern 等）
+- #story: 原創短篇故事、文學創作
 
 ### 自動擴充標籤 (Auto-generated)
 - (將由 Agent 根據內容動態新增)
@@ -52,6 +53,7 @@ updated: 2026-04-13
 |------|------|
 | `concepts/` | 抽象概念、理論、定義（人類可讀版） |
 | `entities/` | 實體、人、組織、工具的專屬頁面 |
+| `entities/stories/` | 原創短篇故事（md 為主，images/ 存放生圖） |
 | `entities/skills/` | Hermes Agent Skill 的備份（可攜式，檔名固定為 SKILL.md） |
 | `raw/` | 原始資料（文章、論文、訪談 transcript） |
 | `_meta/` | 系統元資料 |

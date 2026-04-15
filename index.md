@@ -20,6 +20,7 @@ updated: 2026-04-15
 
 ## 👤 Entities
 
+- [[entities/stories/warm-echoes-of-old-records]] — 舊唱片的餘溫：短篇故事，林曉在二手唱片行發現1998年唱片，懷舊釋然風（4 scenes + AI 生圖）
 - [[entities/skills/productivity/task-guard-workflow/SKILL.md]] — Task Guard Workflow v3.0.0：日誌切片 + 錯誤處理 + Early Abort + Fallback 策略
 - [[entities/hermes/hermes-gateway-systemd-fix]] — Hermes Gateway Systemd 服務修復：UV Python 路徑衝突 + Systemd Override 解法
 - [[entities/hermes/hermes-multiagent-discord-system]] — Hermes 雙 Agent Discord 協作系統：6 階段修復 + 3 大核心 discord.py 修改
