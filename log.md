@@ -165,3 +165,15 @@ updated: 2026-04-13
 ## [2026-04-15] archive-update | concepts/soul-md.md sources updated to _archive paths
 - Updated frontmatter sources to point to _archive/raw/articles/SOUL.md靈魂
 
+## [2026-04-15] create | Research List
+- 建立 [[entities/research-list.md]]
+- 用途：紀錄潛在研究主題與連結
+- index.md 已同步更新
+
+## [2026-04-15] update | Research List 修正
+- 小低能建立 research-list.md 但 index.md 未同步更新、tag/type 偏離 SCHEMA
+- 修正內容：
+  - `type: research-list` → `type: resource`
+  - `tags: [research, list]` → `tags: [resource]`
+  - index.md 新增 Research 區段與條目
+- index.md 已同步更新

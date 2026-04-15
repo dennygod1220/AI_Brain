@@ -8,7 +8,7 @@ updated: 2026-04-15
 # Wiki Index
 
 > 個人數位花園的內容目錄。所有頁面經過分類與摘要。
-> 最後更新: 2026-04-15 | 總頁數: 10
+> 最後更新: 2026-04-15 | 總頁數: 11
 
 ## 🧠 Concepts
 
@@ -34,6 +34,10 @@ updated: 2026-04-15
 - [[entities/extensions/bettersimtracker-custom-stat]] — BetterSimTracker Custom Stat 實作分析（服裝/姿勢/位置 + Illustrious 生圖應用規劃）
 
 ## 💡 Ideas
+
+## 🔬 Research
+
+- [[entities/research-list]] — 研究清單：TimesFM 等待研究主題與資源連結
 
 ## 📖 Learning
 
