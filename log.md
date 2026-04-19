@@ -2,7 +2,7 @@
 name: log
 description: "Chronological record of all wiki actions"
 version: 1.1.0
-updated: 2026-04-15
+updated: 2026-04-20
 ---
 
 ## 2026-04-15
@@ -195,3 +195,10 @@ updated: 2026-04-15
 - 來源：`raw/articles/Skills System  Hermes Agent.md` → 移至 `_archive/`
 - 內容：Hermes Agent 技能系統完整指南（Progressive Disclosure、Skills Hub、external_dirs、skill_manage）
 - index.md 已同步更新（總頁數：11 → 12）
+
+## [2026-04-20] update+archive | pm_orchestration_optimized v2.2.0 歸檔
+- 更新 `raw/pm_orchestration_optimized_v2.md`（v2.1.0 → v2.2.0，status: draft → active）
+- 新增 `entities/skills/pm_orchestration_optimized/SKILL.md`（canonical）
+- 主要變更：新增委派原因②（上下文隔離）、取消中止協議、看板為 source of truth、git 環境偵測、放寬親自動手限制
+- index.md 已同步更新（總頁數：12 → 13）
+

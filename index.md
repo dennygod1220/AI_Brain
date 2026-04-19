@@ -8,7 +8,7 @@ updated: 2026-04-19
 # Wiki Index
 
 > 個人數位花園的內容目錄。所有頁面經過分類與摘要。
-> 最後更新：2026-04-19 | 總頁數：12
+> 最後更新：2026-04-20 | 總頁數：13
 
 ## 🧠 Concepts
 
@@ -22,6 +22,7 @@ updated: 2026-04-19
 
 - [[entities/stories/warm-echoes-of-old-records]] — 舊唱片的餘溫：短篇故事，林曉在二手唱片行發現 1998 年唱片，懷舊釋然風（4 scenes + AI 生圖）
 - [[entities/skills/productivity/task-guard-workflow/SKILL.md]] — Task Guard Workflow v3.0.0：日誌切片 + 錯誤處理 + Early Abort + Fallback 策略
+- [[entities/skills/pm_orchestration_optimized/SKILL.md]] — 敏捷專案總監 v2.2.0：任務拆解、看板建立、子 Agent 委派與成果驗收（委派原因含上下文隔離）
 - [[entities/hermes/hermes-gateway-systemd-fix]] — Hermes Gateway Systemd 服務修復：UV Python 路徑衝突 + Systemd Override 解法
 - [[entities/hermes/hermes-multiagent-discord-system]] — Hermes 雙 Agent Discord 協作系統：6 階段修復 + 3 大核心 discord.py 修改
 - [[entities/skills/agent-soul/SKILL.md]] — SOUL Skill Canonical：SOUL.md 範本、範例與安全檢查清單
