@@ -1,4 +1,4 @@
-# Obsidian
+# Obsidian (untracked)
 .obsidian/
 
 # Schema-defined tracked dirs only: concepts/, entities/, raw/, _meta/, _archive/
@@ -14,3 +14,6 @@ comparisons/
 
 # Plans (generated, not part of wiki)
 docs/plans/*
+
+# Raw collector (pseudo-submodule with own .git/)
+raw_collector/
