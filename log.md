@@ -185,6 +185,11 @@ updated: 2026-04-15
 - index.md Entities 區段已新增條目
 - 故事圖片路徑：`\\wsl.localhost\Ubuntu\root\koboldcpp-config\Hermes\data\temp_outputs\`
 
+## [2026-04-19] update | Research List — 新增 nuwa-skill
+- 在 [[entities/research-list]] 新增 nuwa-skill（女娲）條目
+- 描述：把名人思维方式蒸馏成 Claude Code Skill 的專案，已蒸馏 13 位人物 + 1 主題
+- index.md 無需更新（條目已在 Research 區段）
+
 ## [2026-04-19] create | Hermes Skills System 技能歸檔
 - 新增 `entities/skills/autonomous-ai-agents/hermes-skills-system/SKILL.md`
 - 來源：`raw/articles/Skills System  Hermes Agent.md` → 移至 `_archive/`
