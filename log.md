@@ -184,3 +184,9 @@ updated: 2026-04-15
 - 新增 `entities/stories/warm-echoes-of-old-records.md`（4 scenes + AI 生圖）
 - index.md Entities 區段已新增條目
 - 故事圖片路徑：`\\wsl.localhost\Ubuntu\root\koboldcpp-config\Hermes\data\temp_outputs\`
+
+## [2026-04-19] create | Hermes Skills System 技能歸檔
+- 新增 `entities/skills/autonomous-ai-agents/hermes-skills-system/SKILL.md`
+- 來源：`raw/articles/Skills System  Hermes Agent.md` → 移至 `_archive/`
+- 內容：Hermes Agent 技能系統完整指南（Progressive Disclosure、Skills Hub、external_dirs、skill_manage）
+- index.md 已同步更新（總頁數：11 → 12）
