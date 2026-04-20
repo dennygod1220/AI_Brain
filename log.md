@@ -202,3 +202,12 @@ updated: 2026-04-20
 - 主要變更：新增委派原因②（上下文隔離）、取消中止協議、看板為 source of truth、git 環境偵測、放寬親自動手限制
 - index.md 已同步更新（總頁數：12 → 13）
 
+## [2026-04-20] create | 自動化交易輔助系統
+- 新增 `entities/projects/trading-assistant-system.md`
+- 內容：Python 量化交易研究框架（市場資料蒐集、技術指標、策略回測、績效評估）
+- 位置：`/root/.hermes/profiles/koboldcpp_local/trading_assistant/`
+- 依賴：yfinance, pandas, ta, matplotlib, backtrader
+- 策略：移動平均線交叉、RSI 策略
+- ⚠️ 僅供學習研究，不構成投資建議
+- index.md 已同步更新（總頁數：13 → 14）
+
