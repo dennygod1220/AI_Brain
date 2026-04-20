@@ -38,6 +38,7 @@ updated: 2026-04-15
 - #tool-error: 工具錯誤處理、重試防護、迴圈偵測
 - #extension: 軟體擴充套件研究與分析（SillyTavern 等）
 - #story: 原創短篇故事、文學創作
+- #agent-ecosystem: AI Agent 生態系、Skills 清單、社群資源彙整
 
 ### 自動擴充標籤 (Auto-generated)
 - (將由 Agent 根據內容動態新增)
@@ -55,6 +56,7 @@ updated: 2026-04-15
 | `entities/` | 實體、人、組織、工具的專屬頁面 |
 | `entities/stories/` | 原創短篇故事（md 為主，images/ 存放生圖） |
 | `entities/skills/` | Hermes Agent Skill 的備份（可攜式，檔名固定為 SKILL.md） |
+| `lists/` | 清單彙整性質的檔案（Skills 清單、資源清單、研究清單等） |
 | `raw/` | 原始資料（文章、論文、訪談 transcript） |
 | `_meta/` | 系統元資料 |
 | `_archive/` | 已過時的內容 |

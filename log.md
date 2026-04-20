@@ -211,3 +211,11 @@ updated: 2026-04-20
 - ⚠️ 僅供學習研究，不構成投資建議
 - index.md 已同步更新（總頁數：13 → 14）
 
+## [2026-04-20] create | Hermes Agent 生態系 Skills & Extensions 完整清單
+- 新增 `lists/hermes-agent-ecosystem.md`（type: list）
+- 來源：Hermes Atlas (hermesatlas.com) + awesome-hermes-agent + 官方 GitHub
+- 內容：95+ 經過質量過濾的專案、12 分類、159.3K 總 Stars
+- 涵蓋 6 大區塊：官方專案、Skills Registry、Workspaces/GUIs、Awesome Lists、社群平台、精選清單
+- 推薦優先試用：hermes-webui (2.9K⭐), Anthropic-Cybersecurity-Skills (5.0K⭐), awesome-hermes-agent (1.5K⭐)
+- index.md 已同步更新（總頁數：14 → 15）
+

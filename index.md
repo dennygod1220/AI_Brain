@@ -8,7 +8,7 @@ updated: 2026-04-19
 # Wiki Index
 
 > 個人數位花園的內容目錄。所有頁面經過分類與摘要。
-> 最後更新：2026-04-20 | 總頁數：14
+> 最後更新：2026-04-20 | 總頁數：15
 
 ## 🧠 Concepts
 
@@ -28,6 +28,10 @@ updated: 2026-04-19
 - [[entities/hermes/hermes-multiagent-discord-system]] — Hermes 雙 Agent Discord 協作系統：6 階段修復 + 3 大核心 discord.py 修改
 - [[entities/skills/agent-soul/SKILL.md]] — SOUL Skill Canonical：SOUL.md 範本、範例與安全檢查清單
 - [[entities/skills/autonomous-ai-agents/hermes-skills-system/SKILL.md]] — Hermes Skills System v1.0.0：技能結構、Progressive Disclosure、Skills Hub、外部技能目錄、skill_manage
+
+## 📋 Lists
+
+- [[lists/hermes-agent-ecosystem]] — Hermes Agent 生態系 Skills & Extensions 完整清單：95+ 專案、12 分類、159.3K Stars
 
 ## 🛠️ Resources
 
