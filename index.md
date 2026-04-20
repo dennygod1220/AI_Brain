@@ -17,6 +17,7 @@ updated: 2026-04-19
 - [[concepts/illustrious-prompt-generation-strategy]] — Illustrious Prompt 生成策略：SillyTavern Quick Reply + BetterSimTracker macro 整合實務（Tag→自然語言 fallback）
 - [[concepts/wsl-dns-resolution]] — WSL DNS 解析修復：停用 generateResolvConf + 設定靜態公共 DNS（1.1.1.1 / 8.8.8.8）
 - [[concepts/soul-md]] — SOUL.md（Agent "Soul" document）: 定義 agent 的人格、邊界、風格與安全建議
+- [[concepts/agent-skills-index]] — Agent Skills 用途一覽：各領域 skill 的簡短描述對照表
 
 ## 👤 Entities
 
