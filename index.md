@@ -45,7 +45,7 @@ updated: 2026-04-19
 
 ## 🔬 Research
 
-- [[entities/research-list]] — 研究清單：TimesFM 等待研究主題與資源連結
+- [[lists/research-list]] — 研究清單：TimesFM 等待研究主題與資源連結
 
 ## 📖 Learning
 

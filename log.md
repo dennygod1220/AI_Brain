@@ -219,3 +219,8 @@ updated: 2026-04-20
 - 推薦優先試用：hermes-webui (2.9K⭐), Anthropic-Cybersecurity-Skills (5.0K⭐), awesome-hermes-agent (1.5K⭐)
 - index.md 已同步更新（總頁數：14 → 15）
 
+## [2026-04-21] move | research-list 搬遷至 lists/
+- `entities/research-list.md` → `lists/research-list.md`
+- index.md Research 區段條目已更新為 `[[lists/research-list]]`
+- 用途：lists/ 區段專用於清單型檔案（現有 hermes-agent-ecosystem.md）
+
