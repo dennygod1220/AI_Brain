@@ -224,3 +224,9 @@ updated: 2026-04-20
 - index.md Research 區段條目已更新為 `[[lists/research-list]]`
 - 用途：lists/ 區段專用於清單型檔案（現有 hermes-agent-ecosystem.md）
 
+## [2026-04-23] create | 美股事件每日 Discord 推送建置過程文件
+- 建立 [[concepts/us-market-daily-skill-development]]（完整開發過程：技術決策、4個Bug修復、時區問題）
+- 建立 [[entities/projects/us-market-daily-skill]]（專案實體頁面）
+- index.md Projects 區段已同步更新（總頁數：15 → 16）
+- 記錄 4 個關鍵 bug：finviz HTML JS 動態載入 / UTC-ET 時區跨日 / Fed Balance Sheet 錯誤分類 / IJCUSA 誤入 Fed Events
+
