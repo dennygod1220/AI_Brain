@@ -230,3 +230,9 @@ updated: 2026-04-20
 - index.md Projects 區段已同步更新（總頁數：15 → 16）
 - 記錄 4 個關鍵 bug：finviz HTML JS 動態載入 / UTC-ET 時區跨日 / Fed Balance Sheet 錯誤分類 / IJCUSA 誤入 Fed Events
 
+
+## [2026-04-26] update | Schema + Index cleanup
+- SCHEMA.md: Clarified `entities/skills/` as external skill directory auto-loaded by Agent; removed manual copy note; added config.yaml reference; bumped version to 1.4.0
+- index.md: Removed 2 orphaned skill entries (productivity/task-guard-workflow, agent-soul); updated total page count to 17
+- No content pages modified, only navigation/metadata fix
+
