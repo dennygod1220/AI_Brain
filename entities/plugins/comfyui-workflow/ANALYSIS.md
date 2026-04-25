@@ -3,7 +3,7 @@ name: Hermes Agent ComfyUI Workflow Plugin 分析
 description: 深度分析 hermes-agent-comfyui-workflow 外掛的架構、流程與潛在問題
 version: 1.1.0
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-26
 type: resource
 tags: [tool, plugin, comfyui, image-generation, flux2, hermes]
 sources: [~/.hermes/plugins/hermes-agent-comfyui-workflow/__init__.py]
@@ -287,4 +287,3 @@ debug_mode = os.getenv("COMFY_WORKFLOW_DEBUG", "false").lower() == "true"
 ## 相關頁面
 
 - [[concepts/safe-execution-workflow]] — Agent 安全執行工作流（本 plugin 分析屬於工具測試範疇）
-- [[entities/skills/safe-execution-workflow/SKILL.md]] — Agent 操作版

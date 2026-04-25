@@ -3,7 +3,7 @@ name: Safe Execution Workflow
 description: 安全執行工作流 — Profile-Aware 狀態機 + 終端輸出防護 + 工具錯誤防護 + Artifact 產出，三層合一
 version: 1.1.0
 created: 2026-04-09
-updated: 2026-04-13
+updated: 2026-04-26
 type: concept
 tags: [productivity, safe-execution, tool-error, output-log, error-sanitizer, workflow, state-machine, profile-aware, artifact]
 sources: [hermes-skill, raw/articles/Safe Mission Workflow (狀態機與安全執行工作流)]
@@ -176,4 +176,4 @@ ${PROFILE_DIR}/artifacts/任務名稱_$(date +%Y%m%d).md
 
 - [[log.md]] — 變更日誌
 - [[SCHEMA]] — 知識庫結構規範
-- [[entities/skills/safe-execution-workflow/SKILL.md]] — Agent 操作版（含驗證步驟）
+- [[concepts/safe-execution-workflow]] — 本頁即為完整文件

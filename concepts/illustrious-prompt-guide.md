@@ -3,7 +3,7 @@ name: illustrious-prompt-guide
 description: Illustrious XL 圖像生成模型的 Prompt 撰寫與優化完整指南
 version: 1.0.1
 created: 2026-04-09
-updated: 2026-04-10
+updated: 2026-04-26
 type: concept
 tags: [AI, 圖像生成, Stable Diffusion, Prompt Engineering, Illustrious, SDXL]
 sources: [_archive/raw/articles/illustrious-prompt-guide-2026-04-09.md]
@@ -63,8 +63,8 @@ artist signature
 ## 資料來源
 
 - 官方網站：https://www.illustrious-xl.ai
-- 原始分析：[raw/articles/illustrious-prompt-guide-2026-04-09.md](https://www.illustrious-xl.ai/blog)
+- 原始分析：[_archive/raw/articles/illustrious-prompt-guide-2026-04-09.md](https://www.illustrious-xl.ai/blog)
 
 ## 相關頁面
 
-- [[raw/articles/illustrious-prompt-guide-2026-04-09.md]] — 完整分析報告
+- [[_archive/raw/articles/illustrious-prompt-guide-2026-04-09.md]] — 完整分析報告

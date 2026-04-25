@@ -236,3 +236,29 @@ updated: 2026-04-20
 - index.md: Removed 2 orphaned skill entries (productivity/task-guard-workflow, agent-soul); updated total page count to 17
 - No content pages modified, only navigation/metadata fix
 
+
+## [2026-04-26] lint | 知識庫健康檢查 + 修復
+- 發現 14 個 broken wikilinks
+- 修復內容頁面連結（已刪除的 skill 不再引用）：
+  - `concepts/safe-execution-workflow.md` — 移除 `[[entities/skills/safe-execution-workflow/SKILL.md]]`
+  - `concepts/soul-md.md` — 改連結指向 `[[concepts/safe-execution-workflow]]`
+  - `concepts/hermes-agent-soul-craft.md` — 移除對不存在 `entities/projects/hermes-agent-personality-research` 的引用
+  - `concepts/illustrious-prompt-guide.md` — `raw/articles/` → `_archive/raw/articles/`
+  - `entities/plugins/comfyui-workflow/ANALYSIS.md` — 移除對已刪除 skill 的引用
+- index.md / SCHEMA.md 結構正確，總頁數 17 正確
+- log.md (252行) 無需 rotate
+- 其餘 broken links 均為 log.md 歷史紀錄或 copilot/docs 區域，無需修復
+
+## [2026-04-26] create | Hermes Agent SOUL.md Research & Patterns
+
+- 建立主文件：[[concepts/hermes-agent-soul-craft]] (完整研究報告 400+ 行)
+- 歸檔原始數據：[[raw/soul-md-research-artifacts]]
+  - Dos/Don'ts 分析 (8 + 7 條款)
+  - 5 大 Personality Archetypes 矩陣
+  - 寫作品質檢查清單 (Format/Content/Quality/Mistakes)
+  - 6-Step Migration Guide (含測試查詢)
+- 建立範本索引：[[lists/hermes-soul-templates-quickref]] (3 高頻 template)
+- 來源：官方文档 (2) + GitHub (3+) + 技术博客 (2) + 社群讨论 (5+)
+- Tags: #agent-ecosystem #concept #workflow
+
+> **研究Goal**: 歸纳 Hermes Agent `SOUL.md` 寫作模式，提供给使用者開箱即用的 personality templates 與 dos/don'ts 檢查清單。

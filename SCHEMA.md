@@ -50,16 +50,16 @@ updated: 2026-04-15
 
 ## 目錄結構
 
-| 目錄                  | 用途                              |                                                                 |
-| ------------------- | ------------------------------- | --------------------------------------------------------------- |
-| `concepts/`         | 抽象概念、理論、定義（人類可讀版）               |                                                                 |
-| `entities/`         | 實體、人、組織、工具的專屬頁面                 |                                                                 |
-| `entities/stories/` | 原創短篇故事（md 為主，images/ 存放生圖）      |                                                                 |
-| `entities/skills/`  | Hermes Agent 外部技能目錄（Agent 自動掃描載入，標準格式為 `<skill-name>/SKILL.md`） |
-| `lists/`            | 清單彙整性質的檔案（Skills 清單、資源清單、研究清單等） |                                                                 |
-| `raw/`              | 原始資料（文章、論文、訪談 transcript）       |                                                                 |
-| `_meta/`            | 系統元資料                           |                                                                 |
-| `_archive/`         | 已過时的內容                          |                                                                 |
+| 目錄                  | 用途                                                              |     |
+| ------------------- | --------------------------------------------------------------- | --- |
+| `concepts/`         | 抽象概念、理論、定義（人類可讀版）                                               |     |
+| `entities/`         | 實體、人、組織、工具的專屬頁面                                                 |     |
+| `entities/stories/` | 原創短篇故事（md 為主，images/ 存放生圖）                                      |     |
+| `entities/skills/`  | Hermes Agent 外部技能目錄（Agent 自動掃描載入，標準格式為 `<skill-name>/SKILL.md`） |     |
+| `lists/`            | 清單彙整性質的檔案（Skills 清單、資源清單、研究清單等）                                 |     |
+| `raw/`              | 原始資料（文章、論文、訪談 transcript）                                       |     |
+| `_meta/`            | 系統元資料                                                           |     |
+| `_archive/`         | 已過时的內容                                                          |     |
 
 > **注意：** `entities/skills/` 為 Hermes Agent 的外部技能目錄。需在 `~/.hermes/config.yaml` 中設定：
 > ```yaml

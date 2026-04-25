@@ -1,7 +1,7 @@
 ---
 title: SOUL.md — Agent "Soul" Document
 created: 2026-04-15
-updated: 2026-04-15
+updated: 2026-04-26
 type: concept
 tags: [concept, resource, safe-execution]
 sources: [_archive/raw/articles/SOUL.md靈魂/SOUL.md — What Makes an AI, Itself.md, _archive/raw/articles/SOUL.md靈魂/驯龙高手系列1 给你的小龙虾注入灵魂SOUL.md 详解.md]
@@ -42,7 +42,7 @@ SOUL.md（或稱 "soul document"）是一份以 Markdown 撰寫的人格/身份�
 關聯頁面
 
 - 參見 [[concepts/illustrious-prompt-guide]]（提示詞結構與系統提示設計）
-- 參見 [[entities/skills/productivity/task-guard-workflow/SKILL.md]]（工作流、錯誤處理、早期中止與安全 guard）
+- 參見 [[concepts/safe-execution-workflow]]（工作流、錯誤處理、早期中止與安全 guard）
 
 備註
 

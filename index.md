@@ -19,6 +19,8 @@ updated: 2026-04-19
 - [[concepts/soul-md]] — SOUL.md（Agent "Soul" document）: 定義 agent 的人格、邊界、風格與安全建議
 - [[concepts/agent-skills-index]] — Agent Skills 用途一覽：各領域 skill 的簡短描述對照表
 
+- [[concepts/hermes-agent-soul-craft]] — Hermes Agent SOUL.md 人格設計模式研究：archetypes、寫作技巧、最佳實踐與模板庫
+
 ## 👤 Entities
 
 - [[entities/stories/warm-echoes-of-old-records]] — 舊唱片的餘溫：短篇故事，林曉在二手唱片行發現 1998 年唱片，懷舊釋然風（4 scenes + AI 生圖）
@@ -30,6 +32,8 @@ updated: 2026-04-19
 ## 📋 Lists
 
 - [[lists/hermes-agent-ecosystem]] — Hermes Agent 生態系 Skills & Extensions 完整清單：95+ 專案、12 分類、159.3K Stars
+- [[lists/hermes-soul-templates-quickref]] — SOUL.md 模板速查表：3 大 archetype 一頁式參考
+
 
 ## 🛠️ Resources
 
