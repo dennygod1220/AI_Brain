@@ -17,3 +17,51 @@ docs/plans/*
 
 # Raw collector (pseudo-submodule with own .git/)
 raw_collector/
+
+# Python virtual environments & caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.tox/
+.nox/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+.env
+
+# Node.js dependencies (if skills include JS tooling)
+node_modules/
+
+# Skill-specific temp dirs (per-skill)
+entities/skills/*/__pycache__/
+entities/skills/*/.venv/
+entities/skills/*/venv/
+entities/skills/*/env/
+entities/skills/*/node_modules/
+entities/skills/*/dist/
+entities/skills/*/build/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
