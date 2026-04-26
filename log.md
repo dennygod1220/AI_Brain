@@ -262,3 +262,10 @@ updated: 2026-04-20
 - Tags: #agent-ecosystem #concept #workflow
 
 > **研究Goal**: 歸纳 Hermes Agent `SOUL.md` 寫作模式，提供给使用者開箱即用的 personality templates 與 dos/don'ts 檢查清單。
+
+## [2026-04-26] lint-fix | 知識庫修復：斷鏈 + frontmatter + index + cross-refs
+- **斷鏈修復**：`hermes-multiagent-discord-system.md` 移除失效 `.patch` 引用，改指向 `[[_archive/raw/Hermes_MultiAgent_Fix_Report.md]]`
+- **Frontmatter 補全**：8 頁補上 `title:` 欄位，2 頁修正 `source:`→`sources:`
+- **Index 修正**：加入缺少的 `concepts/us-market-daily-skill-development.md`，頁數同步為 20
+- **Cross-reference**：補 4 組雙向 wikilink（soul-md ↔ hermes-agent-soul-craft、illustrious-prompt-guide ↔ generation-strategy、us-market-daily-skill-development → us-market-daily-skill）
+- 跳過：prompt-master skill（來自 GitHub，非 wiki 原生內容）
