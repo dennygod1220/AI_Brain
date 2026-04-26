@@ -420,6 +420,8 @@ hermes          # 新 session 自動加載
 - 提取 5 大 archetypes、dos/don'ts 守則、3 高頻模板  
 - 建立 migration guide 和 quality checklist  
 - 存放至 `concepts/hermes-agent-soul-craft.md`
+- 參見 [[concepts/soul-md]] — SOUL.md 基礎概念與製作指南
+- 參見 [[lists/hermes-soul-templates-quickref]] — 三大 archetype 模板速查表
 
 ---
 

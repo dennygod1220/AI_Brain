@@ -43,6 +43,7 @@ SOUL.md（或稱 "soul document"）是一份以 Markdown 撰寫的人格/身份�
 
 - 參見 [[concepts/illustrious-prompt-guide]]（提示詞結構與系統提示設計）
 - 參見 [[concepts/safe-execution-workflow]]（工作流、錯誤處理、早期中止與安全 guard）
+- 參見 [[concepts/hermes-agent-soul-craft]]（SOUL.md 人格設計模式研究，含 archetypes 與模板）
 
 備註
 

@@ -69,3 +69,4 @@ artist signature
 ## 相關頁面
 
 - [[_archive/raw/articles/illustrious-prompt-guide-2026-04-09.md]] — 完整分析報告
+- [[concepts/illustrious-prompt-generation-strategy]] — SillyTavern QR + BetterSimTracker macro 整合實務

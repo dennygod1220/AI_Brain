@@ -214,3 +214,5 @@ Hermes cron job 在獨立的 session 執行，venv 的路徑綁定在 shell prof
 2. **前值/預期值的快取**：yfinance 的前值/預期值有時抓不到，可以考慮從 finviz 的經濟數據直接取得
 3. **市場假日偵測**：目前 config.py 寫死假日清單，未來可以自動判斷（NYSE holiday calendar）
 4. **下午報的內容差異**：目前早報和午報格式相同，未來午報可以只推送已確認的數據（actual 值）
+
+專案實體頁面：[[entities/projects/us-market-daily-skill]]
