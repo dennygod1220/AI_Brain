@@ -8,7 +8,7 @@ updated: 2026-04-19
 # Wiki Index
 
 > 個人數位花園的內容目錄。所有頁面經過分類與摘要。
-> 最後更新：2026-04-23 | 總頁數：17
+> 最後更新：2026-04-26 | 總頁數：20
 
 ## 🧠 Concepts
 
@@ -20,6 +20,7 @@ updated: 2026-04-19
 - [[concepts/agent-skills-index]] — Agent Skills 用途一覽：各領域 skill 的簡短描述對照表
 
 - [[concepts/hermes-agent-soul-craft]] — Hermes Agent SOUL.md 人格設計模式研究：archetypes、寫作技巧、最佳實踐與模板庫
+- [[concepts/us-market-daily-skill-development]] — 美股事件每日 Discord 推送建置過程：技術決策、4 個 Bug 修復、時區問題
 
 ## 👤 Entities
 
