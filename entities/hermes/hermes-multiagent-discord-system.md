@@ -4,7 +4,7 @@ created: 2026-04-13
 updated: 2026-04-13
 type: entity
 tags: [Hermes, Discord, Multi-Agent, Bot, Discord.py]
-sources: [_archive/raw/Hermes_Discord_Mod_Guide.md, _archive/raw/Hermes_MultiAgent_Fix_Report.md, _archive/raw/hermes_multiagent_discord.patch]
+sources: [_archive/raw/Hermes_Discord_Mod_Guide.md, _archive/raw/Hermes_MultiAgent_Fix_Report.md]
 ---
 
 # Hermes Multi-Agent Discord System
@@ -46,7 +46,7 @@ Hermes 雙 Agent（主 Agent 蝦蝦 + 本地 Agent 小低能）在 Discord 環�
 在 `message.create_thread` 後自動邀請被標記的使用者與身分組成員。
 
 ## Patch 檔
-代碼補丁位於 `[[_archive/raw/hermes_multiagent_discord.patch]]`。
+代碼補丁詳見 `[[_archive/raw/Hermes_MultiAgent_Fix_Report.md]]`。
 
 ## 未來協作最佳實踐
 1. **單點指揮**：直接 `@蝦蝦` 或 `@小低能` 交付獨立任務
