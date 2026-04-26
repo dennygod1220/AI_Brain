@@ -1,4 +1,5 @@
 ---
+title: "Hermes Agent SOUL.md 人格設計模式研究"
 name: hermes-agent-soul-craft
 description: "Hermes Agent SOUL.md 人格設計模式研究：archetypes、寫作技巧、最佳實踐與模板庫"
 version: 1.0.0

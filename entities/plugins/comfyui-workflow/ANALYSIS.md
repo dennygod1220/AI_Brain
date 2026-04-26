@@ -1,4 +1,5 @@
 ---
+title: "Hermes Agent ComfyUI Workflow Plugin — 深度分析"
 name: Hermes Agent ComfyUI Workflow Plugin 分析
 description: 深度分析 hermes-agent-comfyui-workflow 外掛的架構、流程與潛在問題
 version: 1.1.0

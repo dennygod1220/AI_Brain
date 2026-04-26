@@ -1,4 +1,5 @@
 ---
+title: "美股事件每日 Discord 推送 — 開發過程記錄"
 name: us-market-daily-skill-dev
 description: "美股事件每日 Discord 推送 skill 建置過程：技術決策、bug 修復架構記錄"
 version: 1.0.0

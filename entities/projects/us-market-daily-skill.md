@@ -1,4 +1,5 @@
 ---
+title: "美股事件每日 Discord 推送"
 name: us-market-daily-skill
 description: "Hermes cron skill：每日美股事件 Discord 推送"
 version: 1.0.0

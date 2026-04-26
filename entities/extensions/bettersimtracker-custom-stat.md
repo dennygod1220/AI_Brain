@@ -1,4 +1,5 @@
 ---
+title: "BetterSimTracker Custom Stat 實作分析"
 name: bettersimtracker-custom-stat
 description: BetterSimTracker 擴充套件的 Custom Stat 實作分析，含現有 6 種 stat kind 的結構、各層檔案職責對照，以及服裝/姿勢/位置 + Illustrious 生圖的具體應用規劃
 version: 1.0.0

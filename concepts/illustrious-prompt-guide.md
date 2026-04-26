@@ -1,4 +1,5 @@
 ---
+title: "Illustrious XL Prompt 撰寫與優化指南"
 name: illustrious-prompt-guide
 description: Illustrious XL 圖像生成模型的 Prompt 撰寫與優化完整指南
 version: 1.0.1

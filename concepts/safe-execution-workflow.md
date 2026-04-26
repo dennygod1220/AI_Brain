@@ -1,4 +1,5 @@
 ---
+title: "Safe Execution Workflow（安全執行工作流）"
 name: Safe Execution Workflow
 description: 安全執行工作流 — Profile-Aware 狀態機 + 終端輸出防護 + 工具錯誤防護 + Artifact 產出，三層合一
 version: 1.1.0

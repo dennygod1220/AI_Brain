@@ -1,6 +1,6 @@
 ---
 title: "Hermes Agent 生態系 Skills & Extensions 完整清單"
-source: "https://hermesatlas.com/, https://github.com/0xNyk/awesome-hermes-agent"
+sources: "https://hermesatlas.com/, https://github.com/0xNyk/awesome-hermes-agent"
 created: 2026-04-20
 updated: 2026-04-20
 type: "list"

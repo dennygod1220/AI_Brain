@@ -1,4 +1,5 @@
 ---
+title: "SOUL.md 模板速查表"
 name: hermes-soul-templates-quickref
 description: "Hermes Agent SOUL.md 三大 archetype 模板速查表 (一頁式)"
 version: 1.0.0
