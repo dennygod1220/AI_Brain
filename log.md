@@ -269,3 +269,8 @@ updated: 2026-04-20
 - **Index 修正**：加入缺少的 `concepts/us-market-daily-skill-development.md`，頁數同步為 20
 - **Cross-reference**：補 4 組雙向 wikilink（soul-md ↔ hermes-agent-soul-craft、illustrious-prompt-guide ↔ generation-strategy、us-market-daily-skill-development → us-market-daily-skill）
 - 跳過：prompt-master skill（來自 GitHub，非 wiki 原生內容）
+
+## [2026-04-26] update | trading-assistant-system — 新增 Chrome Extension 截圖分析方向
+- 新增新方向章節：Chrome Extension + Vision 截圖分析
+- 方案核心：Extension 主動截圖 + DOM 抓價 → 存本地 → Hermes 分析
+- 完全繞過 WSL + Chrome CDP 限制，不暴露 TradingView Cookie

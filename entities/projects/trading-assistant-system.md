@@ -4,7 +4,7 @@ title: 自動化交易輔助系統
 description: "Python 自動化交易輔助系統：市場資料蒐集、技術指標計算、交易策略回測、績效評估與圖表生成"
 version: 1.0.0
 created: 2026-04-20
-updated: 2026-04-20
+updated: 2026-04-26
 type: project
 tags: [Trading, Python, Backtesting, TechnicalAnalysis, QuantitativeFinance, Automation]
 sources: [/root/.hermes/profiles/koboldcpp_local/trading_assistant/]
@@ -195,3 +195,77 @@ python3.12 main.py
 | 日期 | 版本 | 變更內容 |
 |------|------|----------|
 | 2026-04-20 | 1.0.0 | 初始版本：基本架構與兩大策略 |
+| 2026-04-26 | 1.1.0 | 新增 Chrome Extension 截圖分析方向：Vision + Extension 協作架構 |
+
+---
+
+## 🧩 新方向：Chrome Extension + Vision 截圖分析 (2026-04-26)
+
+> 基於 Hermes Agent 的 Vision 能力，開發 Chrome Extension 在 TradingView 上截圖並傳送分析，繞過 WSL 無法操控 Chrome + 不暴露 Cookie 的雙重限制。
+
+### 📌 問題背景
+
+- WSL 無法透過 CDP 操控 Windows Chrome
+- TradingView 有反爬機制，用自動化工具可能封鎖付費帳號（內含即時數據費用）
+- 先前租用 Vast.ai 4080S 跑 Qwen 看圖，已停租
+
+### 💡 方案核心設計
+
+**反過來 — 不是 Agent 去操控 Chrome，而是 Chrome Extension 主動把數據丟過來。**
+
+### 🔄 完整 Workflow
+
+1. 用戶在 TradingView 看到 setup，按下 Extension 按鈕/快捷鍵
+2. Extension 同時做三件事：
+   - `chrome.tabs.captureVisibleTab()` 截圖
+   - 從 DOM 抓取當前價格 + 3-5 個常用指標數值
+   - Popup 輸入框：方向（做多/做空）、進場價位（自動帶入）、停損、目標、備註
+3. 數據存到本地路徑 `C:\Users\{user}\TradingScreenshots\`
+4. Hermes Agent 經 `/mnt/c/` 讀取圖片 + JSON
+5. Vision 分析型態、趨勢線、K 棒排列
+6. 同步掃 finviz 行事曆 + 最新新聞
+7. 回覆完整分析 + 風險提醒（含今日事件提醒）
+
+### 🏗️ 技術架構
+
+```
+┌─────────────────────┐     截圖 + DOM 數據
+│  Chrome Extension   │ ──────────────────→ 本地檔案系統
+│  (TradingView 上)   │                    (C:\Users\...\TradingScreenshots\)
+└─────────────────────┘
+                                              │
+                                              ▼
+                                      ┌─────────────────┐
+                                      │  Hermes Agent   │
+                                      │  (WSL)          │
+                                      │  ┌───────────┐  │
+                                      │  │ Vision     │  │ ← 分析截圖
+                                      │  │ Web Search │  │ ← 掃新聞/事件
+                                      │  │ Knowledge  │  │ ← 交易日記
+                                      │  └───────────┘  │
+                                      └─────────────────┘
+                                              │
+                                              ▼
+                                      Discord 推送分析結果
+```
+
+### 📦 Extension 功能細節
+
+| 功能 | 實作方式 | 備註 |
+|------|----------|------|
+| 截圖 | `chrome.tabs.captureVisibleTab()` | 最簡單，vision 可讀型態/趨勢線 |
+| DOM 抓價 | `document.querySelector()` | 當前價格 + MA/RSI 等 3-5 個數值 |
+| Popup 輸入 | Extension Action Popup | 方向、進場價、停損、目標、備註 |
+| 存檔 | 存 PNG + JSON 到本地 | 用 `chrome.downloads` 或 File API |
+
+### ❗ 風險考量
+
+- ✅ **不暴露 TradingView Cookie**，無封號風險
+- ✅ **不需租用 GPU**，Hermes Agent Vision 即可
+- ⚠️ Vision 分析約 15-30 秒，價格數字偶有誤差
+- ⚠️ 開發需 Chrome Extension 技能（用戶有舊經驗但需重新學習）
+
+### 🔗 相關概念
+
+- [[concepts/hermes-agent-soul-craft]] — Hermes Agent 人格設計
+- [[lists/hermes-agent-ecosystem]] — Hermes Agent 生態系
