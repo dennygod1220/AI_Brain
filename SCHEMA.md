@@ -73,6 +73,7 @@ updated: 2026-04-15
 | `raw/`              | 原始資料（文章、論文、訪談 transcript）                                       |     |
 | `trading/`           | 交易知識庫（交易日記、練習筆記、指標研究、市場觀察）                           |     |
 | `trading/sessions/`  | 每日交易記錄（含 P&L，已加入 `.gitignore`）                            |     |
+| `trading/screenshots/`| 交易截圖備份（Extension 匯入時自動同步，供文件引用）                    |     |
 | `trading/journal/`   | 練習筆記與覆盤心得（從交易中提煉的原則）                                  |     |
 | `trading/indicators/`| 技術指標學習筆記（參數設定、實戰行為觀察）                                 |     |
 | `trading/market-notes/`| 市場觀察與模式筆記（時間節點、流動性模式等）                           |     |
