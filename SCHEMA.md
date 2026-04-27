@@ -43,6 +43,19 @@ updated: 2026-04-15
 ### 自動擴充標籤 (Auto-generated)
 - (將由 Agent 根據內容動態新增)
 
+### 交易專用標籤 (Trading Domain)
+- #trading: 交易相關通用標籤
+- #mnq: Micro E-mini Nasdaq-100 期貨
+- #session: 每日交易記錄
+- #learning: 交易學習與練習筆記
+- #indicator-calibration: 指標參數校正
+- #trap: 交易陷阱與教訓
+- #warning-signal: 預警訊號觀察
+- #market-structure: 市場結構分析
+- #session-patterns: 時間/時段模式
+- #technical-analysis: 技術分析
+- #review: 交易覆盤
+
 ## Page Thresholds
 - **Create a page**: 當一個概念在 2+ 原始來源出現，或是是一個新的想法時
 - **Split a page**: 當頁面超過 200 行時，切分為子主題
@@ -58,6 +71,11 @@ updated: 2026-04-15
 | `entities/skills/`  | Hermes Agent 外部技能目錄（Agent 自動掃描載入，標準格式為 `<skill-name>/SKILL.md`） |     |
 | `lists/`            | 清單彙整性質的檔案（Skills 清單、資源清單、研究清單等）                                 |     |
 | `raw/`              | 原始資料（文章、論文、訪談 transcript）                                       |     |
+| `trading/`           | 交易知識庫（交易日記、練習筆記、指標研究、市場觀察）                           |     |
+| `trading/sessions/`  | 每日交易記錄（含 P&L，已加入 `.gitignore`）                            |     |
+| `trading/journal/`   | 練習筆記與覆盤心得（從交易中提煉的原則）                                  |     |
+| `trading/indicators/`| 技術指標學習筆記（參數設定、實戰行為觀察）                                 |     |
+| `trading/market-notes/`| 市場觀察與模式筆記（時間節點、流動性模式等）                           |     |
 | `_meta/`            | 系統元資料                                                           |     |
 | `_archive/`         | 已過时的內容                                                          |     |
 

@@ -183,7 +183,7 @@ updated: 2026-04-20
 ## [2026-04-15] create | 短篇故事：舊唱片的餘溫
 - 新增 `entities/stories/warm-echoes-of-old-records.md`（4 scenes + AI 生圖）
 - index.md Entities 區段已新增條目
-- 故事圖片路徑：`\\wsl.localhost\Ubuntu\root\koboldcpp-config\Hermes\data\temp_outputs\`
+- 故事圖片路徑：`\\\\wsl.localhost\\Ubuntu\\root\\koboldcpp-config\\Hermes\\data\\temp_outputs\\`
 
 ## [2026-04-19] update | Research List — 新增 nuwa-skill
 - 在 [[entities/research-list]] 新增 nuwa-skill（女娲）條目
@@ -274,3 +274,59 @@ updated: 2026-04-20
 - 新增新方向章節：Chrome Extension + Vision 截圖分析
 - 方案核心：Extension 主動截圖 + DOM 抓價 → 存本地 → Hermes 分析
 - 完全繞過 WSL + Chrome CDP 限制，不暴露 TradingView Cookie
+
+## [2026-04-27] create | docs/plans — TradingView Chrome Extension 實作計畫
+- 新增: `docs/plans/2026-04-27-tradingview-chrome-extension.md`
+- 共 13 個 Task，分 4 個 Phase
+- Phase 1: Extension 核心骨架 (Manifest + Popup + Content Script)
+- Phase 2: 截圖 + 存檔 (Background Worker + 端到端測試)
+- Phase 3: Hermes 側管道 (Watcher + Skill + Alias)
+- Phase 4: 邊界情況打磨 (Error Handling + README)
+
+## [2026-04-27] create | raw — MNQ 早盤交易覆盤
+- 新增: `raw/2026-04-27-mnq-morning-trade-notes.md`
+- 交易記錄：27,386.5做空×2口，TP1=27,374.5 (+12點)✅，第二口停損27,401.75 (-15.25點)❌
+- J值實測：4.80→22.88→91.29，發現MNQ超賣閾值可能需到0~-5才有效
+- 技術觀察：EMA三線坍縮(<5點差距=無效壓力牆)、第二次超賣效力弱於第一次
+- Tags: #trading #mnq #kdj #review
+
+## [2026-04-27] create | trading/ 交易知識庫初始化
+- 建立 `trading/` 目錄結構 + `trading/index.md`
+- 子目錄：sessions/, journal/, indicators/, market-notes/
+- 新增 `.gitignore` 規則：忽略 `trading/sessions/*`
+- SCHEMA.md：加入 trading 目錄結構 + 11 個交易專用標籤
+- index.md：加入 📈 Trading 章節，共 8 個條目
+
+## [2026-04-27] copy | raw → trading/sessions/
+- 複製: `raw/2026-04-27-mnq-morning-trade-notes.md` → `trading/sessions/2026-04-27-mnq-morning.md`
+- raw 副本加上 frontmatter（保留為不可變原始記錄）
+- sessions 副本加上 session 型態 frontmatter
+
+## [2026-04-27] create | trading/journal — 覆盤知識萃取
+- 建立 [[trading/journal/kdj-mnq-threshold-calibration]]
+- 建立 [[trading/journal/second-oversold-trap]]
+- 建立 [[trading/journal/ema-collapse-warning]]
+
+## [2026-04-27] create | trading/indicators — 指標筆記
+- 建立 [[trading/indicators/kdj-for-mnq]]
+- 建立 [[trading/indicators/stochrsi-extreme-behavior]]
+
+## [2026-04-27] create | trading/market-notes — 市場觀察
+- 建立 [[trading/market-notes/asian-session-liquidity]]
+
+## [2026-04-27] update | raw — 補 frontmatter
+- `raw/2026-04-27-mnq-morning-trade-notes.md` 新增 YAML frontmatter
+
+## [2026-04-27] update | SCHEMA.md — trading 結構與標籤
+- 目錄表加入 trading/ 及其子目錄
+- 標籤分類新增 Trading Domain（11 個標籤）
+
+## [2026-04-27] update | index.md — 加入 Trading 章節
+- 頁數更新 20→30
+- 新增 📈 Trading 章節（8 個 wikilinks）
+- 更新: `raw/2026-04-27-mnq-morning-trade-notes.md`
+- 補充第二筆交易：27,419.5做多×2口，TP1=27,434.5(+15點)✅，TP2=27,444.75(+25.25點)✅
+- 今日總計：空單 -3.25點 + 多單 +40.25點 = **+37點**
+- 新增KDJ關鍵發現：強趨勢下J值可在80+持續運行，K/D多頭排列比J值絕對值更重要
+- 新增StochRSI兩度黏住100/100的極端狀況記錄
+- Tags: #trading #mnq #kdj #review

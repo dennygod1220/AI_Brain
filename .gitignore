@@ -15,6 +15,9 @@ comparisons/
 # Plans (generated, not part of wiki)
 docs/plans/*
 
+# Trading session logs (sensitive P&L data)
+trading/sessions/*
+
 # Raw collector (pseudo-submodule with own .git/)
 raw_collector/
 

@@ -8,7 +8,7 @@ updated: 2026-04-19
 # Wiki Index
 
 > 個人數位花園的內容目錄。所有頁面經過分類與摘要。
-> 最後更新：2026-04-26 | 總頁數：20
+# 最後更新：2026-04-27 | 總頁數：30
 
 ## 🧠 Concepts
 
@@ -57,6 +57,10 @@ updated: 2026-04-19
 - [[entities/projects/trading-assistant-system]] — 自動化交易輔助系統：市場資料蒐集、技術指標計算、策略回測與績效評估（僅供學習研究）
 - [[entities/projects/us-market-daily-skill]] — 美股事件每日 Discord 推送：finviz HTML JSON 解析、UTC/ET 時區跨日修復、Fed 事件嚴格分類
 
+## 📋 Plans
+
+- [[docs/plans/2026-04-27-tradingview-chrome-extension]] — TradingView Chrome Extension 截圖分析系統：13 Task 實作計畫（Extension MVP → Hermes 整合 → 打磨）
+
 ## 🧪 Testing
 
 ## ⚖️ Comparisons
@@ -64,3 +68,14 @@ updated: 2026-04-19
 ## 🔍 Queries
 
 ## 📅 Daily Log
+
+## 📈 Trading
+
+- [[trading/index]] — Trading 交易知識庫目錄
+- [[trading/sessions/2026-04-27-mnq-morning]] — 2026-04-27 早盤 MNQ 交易記錄：+37 點
+- [[trading/journal/kdj-mnq-threshold-calibration]] — KDJ 在 MNQ 的閾值校正
+- [[trading/journal/second-oversold-trap]] — 第二次超賣陷阱
+- [[trading/journal/ema-collapse-warning]] — EMA 三線坍縮 = 無效壓力牆
+- [[trading/indicators/kdj-for-mnq]] — KDJ 指標 MNQ 實戰用法
+- [[trading/indicators/stochrsi-extreme-behavior]] — StochRSI 極端值行為觀察
+- [[trading/market-notes/asian-session-liquidity]] — 亞洲盤流動性模式
