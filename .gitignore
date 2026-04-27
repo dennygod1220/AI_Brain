@@ -17,6 +17,7 @@ docs/plans/*
 
 # Trading session logs (sensitive P&L data)
 trading/sessions/*
+trading/screenshots/*
 
 # Raw collector (pseudo-submodule with own .git/)
 raw_collector/

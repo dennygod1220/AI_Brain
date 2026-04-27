@@ -324,6 +324,13 @@ updated: 2026-04-20
 ## [2026-04-27] update | index.md — 加入 Trading 章節
 - 頁數更新 20→30
 - 新增 📈 Trading 章節（8 個 wikilinks）
+
+## [2026-04-27] update | hermes-watcher.py — wiki 截圖歸檔
+- `hermes-watcher.py` 新增 `WIKI_SCREENSHOT_DIR` 與 `--archive-wiki` 指令
+- `--import` 現在同步複製截圖到 `WIKI/trading/screenshots/`
+- 獨立的 `--archive-wiki` 可手動歸檔最新截圖
+- 引用方式：`![[tv_2026-04-27_07-30-00.png]]`
+- 新增 `trading/screenshots/` 目錄至 SCHEMA.md
 - 更新: `raw/2026-04-27-mnq-morning-trade-notes.md`
 - 補充第二筆交易：27,419.5做多×2口，TP1=27,434.5(+15點)✅，TP2=27,444.75(+25.25點)✅
 - 今日總計：空單 -3.25點 + 多單 +40.25點 = **+37點**
