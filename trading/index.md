@@ -11,7 +11,7 @@ tags: [trading, index]
 # Trading 交易知識庫
 
 > MNQ 交易日記、練習筆記與市場觀察。
-> 最後更新：2026-04-29
+> 最後更新：2026-04-30
 
 ## 📋 Sessions（交易日記）
 
@@ -21,7 +21,9 @@ tags: [trading, index]
 
 > ⚠️ 以下為人類可讀版交易日記：
 
-- [[trading/sessions/2026-04-29-mnq-morning]] — 2026-04-29 全日：-15.5→+2.5→+4.5→+16.5 = **+8pt** 🎊
+- [[trading/sessions/2026-04-29-mnq-morning]] — 2026-04-29 早盤：+8pt 🟢
+- [[trading/sessions/2026-04-29-mnq-night]] — 2026-04-29 夜盤：-39.25→+77.5 = **+38.25pt** 🚀（驗證 ADX DI>20 + KDJ 模式）
+- [[trading/sessions/2026-04-30-mnq-morning]] — 2026-04-30 早盤：27,299.5→27,325.5/27,383.75 = **+110.25pt** 🚀（兩口拆分教科書 +110.25pt）
 - [[trading/sessions/2026-04-28-mnq-morning]] — 2026-04-28 早盤：兩口多單(+14.5點) = **+14.5點** 🚀
 - [[trading/sessions/2026-04-27-mnq-night]] — 2026-04-27 夜盤：交易一(-56.5) + 交易二(+72.75) + 交易三(+11.5) = **+27.75點** 🎯
 
@@ -43,3 +45,7 @@ tags: [trading, index]
 
 - [[trading/market-notes/asian-session-liquidity]] — 亞洲盤流動性模式：06:00/08:00/09:00 時間節點
 - [[trading/market-notes/cme-data-pricing]] — CME 即時數據訂閱方案與費用比較（IBKR/Binance/Databento 等）
+
+## 📋 Strategy（策略文件）
+
+- [[trading/strategy/mnq-scalping-system]] — MNQ Scalping 系統策略參考：完整進出場規則、Train Mode 🚃、手機速查表

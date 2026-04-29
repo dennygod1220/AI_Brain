@@ -3,6 +3,25 @@
 # Fields: id, date, session, direction, contracts, entry, exits[], pnl_detail, lesson_tags
 
 trades:
+  - id: "2026-04-30-001"
+    date: "2026-04-30"
+    session: "morning"
+    direction: "long"
+    contracts: 2
+    entry_price: 27299.5
+    entry_time: "06:05"
+    exit_time: "06:12"
+    exits:
+      - price: 27325.5
+        reason: "TP1"
+        pnl: 26.0
+      - price: 27383.75
+        reason: "manual_close"
+        pnl: 84.25
+    pnl_total: 110.25
+    rr: null
+    entry_reason: "KDJ golden cross (K=61 > D=46) + ADX DI+=32.12 > DI-=21.97 (DI+>20, gap~10) + EMA structure bullish. Continuation long after recovery from 04:00 dip, price broke above consolidation."
+    lesson_tags: ["textbook-two-contract-split", "kdj-adx-di20-pattern", "trend-day-execution"]
   - id: "2026-04-27-001"
     date: "2026-04-27"
     session: "morning"
@@ -182,3 +201,108 @@ trades:
     rr: null
     entry_reason: "Bearish trend clear (price below all EMAs). StochRSI 2.12 extreme oversold but past precedent of false signals in strong trend"
     lesson_tags: ["stochrsi-false-oversold", "post-loss-recovery-trade", "poc-breakout-gamble"]
+
+  - id: "2026-04-29-001"
+    date: "2026-04-29"
+    session: "morning"
+    direction: "long"
+    contracts: 1
+    entry_price: 27250.25
+    entry_time: "09:00"
+    exit_time: "09:06"
+    exits:
+      - price: 27234.75
+        reason: "manual_stop_loss"
+        pnl: -15.5
+    pnl_total: -15.5
+    rr: null
+    entry_reason: "Attempted long at slow EMA bounce. J=5 oversold but K/D not crossed — entered before golden cross confirmation"
+    lesson_tags: ["second-oversold-trap", "no-golden-cross-confirmation", "ema-structure-break-exit", "manual-stop-loss"]
+
+  - id: "2026-04-29-002"
+    date: "2026-04-29"
+    session: "morning"
+    direction: "long"
+    contracts: 1
+    entry_price: 27216.5
+    entry_time: "09:12"
+    exit_time: "09:17"
+    exits:
+      - price: 27219.0
+        reason: "manual_close"
+        pnl: 2.5
+    pnl_total: 2.5
+    rr: null
+    entry_reason: "KDJ golden cross confirmed (K=26.23 crossed D=22.36, J=20.43). Oversold bounce entry"
+    lesson_tags: ["exit-too-early", "golden-cross-confirmation", "post-loss-recovery"]
+
+  - id: "2026-04-29-003"
+    date: "2026-04-29"
+    session: "morning"
+    direction: "long"
+    contracts: 2
+    entry_price: 27256.75
+    entry_time: "09:43"
+    exit_time: "10:34"
+    exits:
+      - price: 27259.0
+        reason: "partial_close"
+        pnl: -2.0
+      - price: 27259.0
+        reason: "partial_close"
+        pnl: 6.5
+    pnl_total: 4.5
+    rr: null
+    entry_reason: "Dual-contract entry after EMA structure flipped bullish (price above all three EMAs). KDJ golden cross J=99"
+    lesson_tags: ["dual-contract-split", "range-day-reduction", "kdj-death-cross-exit", "di-gap-collapse"]
+
+  - id: "2026-04-29-004"
+    date: "2026-04-29"
+    session: "morning"
+    direction: "long"
+    contracts: 1
+    entry_price: 27291.0
+    entry_time: "13:33"
+    exit_time: "13:51"
+    exits:
+      - price: 27307.5
+        reason: "manual_close"
+        pnl: 16.5
+    pnl_total: 16.5
+    rr: null
+    entry_reason: "Pullback to fast EMA (27292) after new high 27312. EMA structure healthy, KDJ J=97"
+    lesson_tags: ["textbook-pullback-entry", "j-value-extreme-exit", "trend-day-execution"]
+
+  - id: "2026-04-29-005"
+    date: "2026-04-29"
+    session: "night"
+    direction: "short"
+    contracts: 1
+    entry_price: 27181.25
+    entry_time: "22:09"
+    exit_time: "22:17"
+    exits:
+      - price: 27220.5
+        reason: "stop_loss"
+        pnl: -39.25
+    pnl_total: -39.25
+    rr: null
+    entry_reason: "KDJ death cross + ADX DI-=23.01>20 — pattern triggered but entered 2 hours late after price already dropped 58pt"
+    lesson_tags: ["entry-too-late", "j-value-momentum-exhausted", "pattern-valid-execution-flawed"]
+
+  - id: "2026-04-29-006"
+    date: "2026-04-29"
+    session: "night"
+    direction: "long"
+    contracts: 1
+    entry_price: 27223.75
+    entry_time: "22:20"
+    exit_time: "22:38"
+    exits:
+      - price: 27301.25
+        reason: "manual_close"
+        pnl: 77.5
+    pnl_total: 77.5
+    rr: null
+    entry_reason: "KDJ golden cross confirmed + ADX DI+=20.72 crossed above 20. Price reclaimed slow EMA. Textbook Jason's Pattern entry"
+    lesson_tags: ["kdj-adx-di20-pattern", "sl-ladder-management", "j-value-plateau-exit", "pattern-representative-trade"]

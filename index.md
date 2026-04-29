@@ -1,14 +1,14 @@
 ---
 name: index
 description: "Wiki content catalog"
-version: 1.2.0
-updated: 2026-04-28
+version: 1.2.1
+updated: 2026-04-29
 ---
 
 # Wiki Index
 
 > 個人數位花園的內容目錄。所有頁面經過分類與摘要。
-# 最後更新：2026-04-29 | 總頁數：36
+# 最後更新：2026-04-30 | 總頁數：39
 
 ## 🧠 Concepts
 
@@ -72,7 +72,10 @@ updated: 2026-04-28
 ## 📈 Trading
 
 - [[trading/index]] — Trading 交易知識庫目錄
-- [[trading/sessions/2026-04-29-mnq-morning]] — 2026-04-29 全日：-15.5→+2.5→+4.5→+16.5 = **+8pt** 🎊
+- [[trading/sessions/2026-04-29-mnq-morning]] — 2026-04-29 早盤：+8pt 🟢
+- [[trading/sessions/2026-04-29-mnq-night]] — 2026-04-29 夜盤：**+38.25pt** 🚀（模式驗證 +77.5pt 代表作）
+- [[trading/sessions/2026-04-30-mnq-morning]] — 2026-04-30 早盤：**+110.25pt** 🚀（兩口拆分教科書，trade-log 單筆最高）
+- [[trading/strategy/mnq-scalping-system]] — MNQ Scalping 策略參考文件：完整進出場規則、Train Mode 🚃、手機速查表
 - [[trading/sessions/2026-04-28-mnq-morning]] — 2026-04-28 早盤 MNQ 交易記錄：+14.5 點 🚀
 - [[trading/sessions/2026-04-27-mnq-morning]] — 2026-04-27 早盤 MNQ 交易記錄：+37 點
 - [[trading/sessions/2026-04-27-mnq-night]] — 2026-04-27 夜盤 MNQ 交易記錄：-56.5+72.75+11.5 = +27.75 點 🎯

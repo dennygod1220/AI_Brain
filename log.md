@@ -447,3 +447,29 @@ updated: 2026-04-20
 - `trading/index.md` — 新增 trade-log.yaml 索引
 - `SCHEMA.md` — 新增 `trading/trade-log.yaml` 目錄說明
 - 統計腳本將寫入 `mnq-trading-system` skill 的 scripts/ 目錄
+
+## [2026-04-29] create | trading/sessions — MNQ 夜盤交易記錄（+38.25pt 🚀）
+- 新增: `trading/sessions/2026-04-29-mnq-night.md`
+- 交易一（空）：27,181.25做空×1口，SL 27,220.50（-39.25pt ❌，進場太晚）
+- 交易二（多）：27,223.75做多×1口，出場 27,301.25（+77.5pt 🚀，模式代表作）
+- **夜盤總計：+38.25pt (+$76.5) | 全日總計：+46.25pt (+$92.5)**
+- 驗證 Jason's Pattern：KDJ先行交叉 + ADX DI交叉>20 = 高勝率
+- PPO 正式從系統中移除（簡化為 EMA+KDJ+ADX DI 三指標）
+- 引用7張截圖: 20:03(觀察)→22:09(進空)→22:17(停損)→22:20(進多)→22:26(SL調整)→22:32(SL調整)→22:38(結單+77.5pt)
+- index.md 及 trading/index.md 已同步更新（總頁數 36→37）
+
+## [2026-04-30] create | trading/sessions — MNQ 早盤交易記錄（+110.25pt 🚀，兩口拆分教科書）
+- 新增: `trading/sessions/2026-04-30-mnq-morning.md`
+- 交易一（多）：27,299.5做多×2口，TP1 27,325.5(+26pt) / 第二口 27,383.75(+84.25pt) = **+110.25pt** 🚀
+- **trade-log 中單筆獲利最高記錄**
+- Jason's Pattern 再次驗證：KDJ 黃金交叉先行 + ADX DI+>20 確認
+- KDJ J=112.59 過熱門檻（MNQ 105+）出場，時機精準
+- 兩口拆分完美執行：TP1 +26 保護利潤，第二口放手讓 🚀
+- 歸檔3張截圖: 06:05(進場)→06:06(TP1後)→06:12(結單+84.25pt)
+- index.md 頁數 37→38，trading/index.md & log.md 同步更新
+
+## [2026-04-30] create | trading/strategy — MNQ Scalping System 策略參考文件
+- 新增: `trading/strategy/mnq-scalping-system.md`
+- 完整收錄：圖表配置、進場5層篩選、兩口拆分+Train Mode 🚃 出場規則、盤整辨識、口數決策、8條原則、關鍵數字速查、亞洲盤時間節點
+- 手機友善格式，盤中可快速查閱
+- index.md 頁數 38→39，trading/index.md 新增 Strategy 分類
