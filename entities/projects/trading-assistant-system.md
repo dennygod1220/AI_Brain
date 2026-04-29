@@ -269,3 +269,4 @@ python3.12 main.py
 
 - [[concepts/hermes-agent-soul-craft]] — Hermes Agent 人格設計
 - [[lists/hermes-agent-ecosystem]] — Hermes Agent 生態系
+- [[docs/plans/2026-04-27-tradingview-chrome-extension]] — 實作計畫

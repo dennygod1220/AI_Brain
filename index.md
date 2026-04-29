@@ -2,13 +2,13 @@
 name: index
 description: "Wiki content catalog"
 version: 1.2.0
-updated: 2026-04-19
+updated: 2026-04-28
 ---
 
 # Wiki Index
 
 > 個人數位花園的內容目錄。所有頁面經過分類與摘要。
-# 最後更新：2026-04-27 | 總頁數：30
+# 最後更新：2026-04-29 | 總頁數：36
 
 ## 🧠 Concepts
 
@@ -72,10 +72,16 @@ updated: 2026-04-19
 ## 📈 Trading
 
 - [[trading/index]] — Trading 交易知識庫目錄
+- [[trading/sessions/2026-04-29-mnq-morning]] — 2026-04-29 全日：-15.5→+2.5→+4.5→+16.5 = **+8pt** 🎊
+- [[trading/sessions/2026-04-28-mnq-morning]] — 2026-04-28 早盤 MNQ 交易記錄：+14.5 點 🚀
 - [[trading/sessions/2026-04-27-mnq-morning]] — 2026-04-27 早盤 MNQ 交易記錄：+37 點
+- [[trading/sessions/2026-04-27-mnq-night]] — 2026-04-27 夜盤 MNQ 交易記錄：-56.5+72.75+11.5 = +27.75 點 🎯
 - [[trading/journal/kdj-mnq-threshold-calibration]] — KDJ 在 MNQ 的閾值校正
 - [[trading/journal/second-oversold-trap]] — 第二次超賣陷阱
 - [[trading/journal/ema-collapse-warning]] — EMA 三線坍縮 = 無效壓力牆
+- [[trading/journal/entry-hesitation-signal]] — 入場猶豫本身就是信號
 - [[trading/indicators/kdj-for-mnq]] — KDJ 指標 MNQ 實戰用法
+- [[trading/indicators/adx-for-mnq]] — ADX 盤整過濾 + 多時間框架（避免盤整日雙巴）
+- [[trading/indicators/ema-kdj-ppo-adx-correlation]] — 四指標趨勢 vs 盤整行為對照表（實證分析）
 - [[trading/indicators/stochrsi-extreme-behavior]] — StochRSI 極端值行為觀察
 - [[trading/market-notes/asian-session-liquidity]] — 亞洲盤流動性模式

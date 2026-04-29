@@ -290,7 +290,56 @@ updated: 2026-04-20
 - 技術觀察：EMA三線坍縮(<5點差距=無效壓力牆)、第二次超賣效力弱於第一次
 - Tags: #trading #mnq #kdj #review
 
-## [2026-04-27] create | trading/ 交易知識庫初始化
+## [2026-04-27] create | trading/sessions — MNQ 夜盤交易記錄
+- 新增: `trading/sessions/2026-04-27-mnq-night.md`
+- 交易：27,400做空×2口，SL 27,428.25，被StochRSI超賣反彈嘎停損 -56.5點 (-$113)
+- 方向判斷正確（停損後跌到27,387），但進場太急 + SL太窄
+- 引用3張夜盤截圖: 20:38(猶豫)→20:43(被嘎)→20:49(停損)
+
+## [2026-04-27] create | trading/journal — 入場猶豫本身就是信號
+- 新增: `trading/journal/entry-hesitation-signal.md`
+- 核心原則：當你在問「要不要等XX」，答案永遠是「等」
+- 根據夜盤經驗萃取：「猶豫代表條件不成熟」
+
+## [2026-04-27] update | index.md + trading/index.md — 新增夜盤 & journal 條目
+- index.md 總頁數 30→32
+- trading/index.md 加入夜盤 session 與 journal 新條目
+
+## [2026-04-27] update | trading/sessions — 夜盤補上交易二（+72.75點）
+- 夜盤記錄補上第二筆交易：27,418.75做空×2口，TP1=27,394(+24.75點)✅，TP2=27,370.75(+48點)✅
+- 合計 +72.75點，夜盤從-56.5點翻正為+16.25點
+- 新增6張截圖來源
+- 新增收穫：分倉管理、POC壓力確認後才進場、美股開盤前抱單心態
+
+## [2026-04-28] create | trading/sessions — MNQ 早盤交易記錄（+14.5點）
+- 新增: `trading/sessions/2026-04-28-mnq-morning.md`
+- 交易：27,490.5做多×2口，第1口27,499.5平(+9點)✅，第2口27,496平(+5.5點)✅
+- 合計 +14.5點 (+$29)
+- 亮點：SL調整有紀律(10→16→追蹤EMA)、KDJ+StochRSI雙重死叉確認出場、分倉管理正確
+- 引用4張截圖: 07:20(觀察)→07:25(進場)→07:37(TP1)→07:45(TP2)
+
+## [2026-04-28] update | trading/sessions — 早盤補上交易二（±0點打平）
+- 新增交易二：27,493做多×2口，第1口27,484(-9點)❌，第2口27,502(+9點)✅ = ±0
+- 亮點：第一口被掃後第二口抱到打平、27,500 突破後順利成交
+- 新增2張截圖：08:05(被掃)→08:09(突破+打平)
+- 加入教訓：進場時間點＝盈虧關鍵、大賺後下一筆要更嚴格
+
+## [2026-04-28] update | trading/sessions — 早盤補上交易三&四（最終 -16點）
+- 新增交易三：27,474.5做多限價單×2口，SL 27,446.5(-56點)❌
+  - EMA坍縮區接多 = 接刀子，完全驗證框架教訓
+- 新增交易四：27,446做空×2口，TP 27,433.25(+25.5點)✅
+  - 從-56虧損後快速調整，心態清楚
+- PnL更新：+14.5→±0→-56→+25.5 = **-16點**
+- 新增4張截圖：09:49→09:50→09:54→09:57
+
+## [2026-04-28] update | index.md + trading/index.md — 新增早盤條目
+- index.md 總頁數 32→33
+- trading/index.md 加入新 session 條目
+- 第三筆：27,390.75做空×2口，27,385手動平倉，+11.5點
+- 方向判斷正確（平倉後跌到27,360），但心態不對（大賺後急著續賺）+ 進場太早（反彈中途）
+- 亮點：發現心態亂了主動小賺出場，保住了今日戰果
+- 總計夜盤調整：+16.25→+27.75點，全日+64.75點
+- index.md / trading/index.md 已同步更新
 - 建立 `trading/` 目錄結構 + `trading/index.md`
 - 子目錄：sessions/, journal/, indicators/, market-notes/
 - 新增 `.gitignore` 規則：忽略 `trading/sessions/*`
@@ -337,3 +386,64 @@ updated: 2026-04-20
 - 新增KDJ關鍵發現：強趨勢下J值可在80+持續運行，K/D多頭排列比J值絕對值更重要
 - 新增StochRSI兩度黏住100/100的極端狀況記錄
 - Tags: #trading #mnq #kdj #review
+
+## [2026-04-28] create | CME 即時數據訂閱方案
+- 建立 [[trading/market-notes/cme-data-pricing]]
+- 內容：CME 市場數據 6 種方案比較（免費～$179/月），含 IBKR/Binance/Databento/CME Direct 等
+- 用途：為 Hermes Agent 即時盤面監控選型參考
+- Tags: #trading #mnq #resource
+
+## [2026-04-29] create | trading/sessions — MNQ 早盤交易記錄（-15.5點）
+- 新增: `trading/sessions/2026-04-29-mnq-morning.md`
+- 交易：27,250.25 做多×1口，手動停損 27,234.75（-15.5點 ❌）
+- 進場邏輯：慢線EMA接多，合理方向正確好球，但K/D尚未給golden cross
+- 停損邏輯：價格跌破EMA三線 + KDJ J二次探底(-8.47) = 方向假設被破壞
+- 亮點：手動提前停損沒死守32pt遠SL，紀律正確
+- 第二次 oversold trap 再次驗證（J: 5.02→16.43→3.14→-8.47）
+- 引用4張截圖：08:55(觀察)→09:00(進場)→09:04(警示)→09:06(停損)
+- index.md 總頁數 33→34
+- trading/index.md 已同步更新
+
+## [2026-04-29] create | trading/indicators — ADX 盤整過濾 + 多時間框架
+- 新增: `trading/indicators/adx-for-mnq.md`
+- 內容：ADX(14) 作為趨勢強度濾網（<18=休息, 18-22=1口模式, >22=正常）
+- 多時間框架過濾規則：3分K進場前先看15分K的KDJ方向
+- 盤整日識別清單（5項特徵，≥3項 = 盤整日）
+- 口數決策矩陣（ADX×15分K方向一致性）
+- 4/29 盤整日案例驗證：84pt區間來回3趟
+- index.md 總頁數 34→35
+- trading/index.md 已同步更新
+
+- fix | 修正 PnL 為 +8pt（補上交易四午盤 +16.5pt）
+- index.md 及 trading/index.md 已同步更新
+
+## [2026-04-29] create | trading/indicators — 四指標趨勢 vs 盤整行為對照表
+- 新增: `trading/indicators/ema-kdj-ppo-adx-correlation.md`
+- 實證分析：4/29 全天 12 個時間點截圖數據交叉比對
+- 關鍵發現 1：PPO 收斂到同值 = KDJ 交叉可靠度最高
+- 關鍵發現 2：PPO 差距大時 KDJ 交叉容易失敗
+- 關鍵發現 3：DI+/DI- 差距 > 10 方向才可信
+- 建立完整四指標趨勢 vs 盤整對照表
+- index.md 總頁數 35→36
+- trading/index.md 已同步更新
+
+## [2026-04-29] update | mnq-trading-system skill — 加入ADX過濾 + 多時間框架
+- 加入 ADX(14) 至 Indicators 表 + 口數決策矩陣
+- 加入 15-min KDJ alignment check (Multi-Timeframe Filter)
+- 加入 Chop Day Recognition checklist（5 signals）
+- 加入 Structural thesis break = exit before hard SL 至原則#8
+- 已合併自 trading/indicators/adx-for-mnq
+
+## [2026-04-29] fix | trading/indicators/adx-for-mnq v2 — 修正 ADX 閾值錯誤
+- 實際 ADX 早上 ~35，非 v1 推估的 <20
+- ADX(14) 在 3分K MNQ 長期 25-40，教科書閾值不適用
+- v2 改為：看 DI+/DI- 關係（差距 >10 = 有方向，<5 交叉 = 盤整）
+- 保留 15分K KDJ 方向過濾（仍然有效）
+  - mnq-trading-system skill 同步更新
+
+## 2026-04-29
+
+- `trading/trade-log.yaml` — 建立結構化交易紀錄（YAML，9 筆 trade 從 04/27-04/28 session 記錄中提取）
+- `trading/index.md` — 新增 trade-log.yaml 索引
+- `SCHEMA.md` — 新增 `trading/trade-log.yaml` 目錄說明
+- 統計腳本將寫入 `mnq-trading-system` skill 的 scripts/ 目錄

@@ -72,6 +72,7 @@ updated: 2026-04-15
 | `lists/`            | 清單彙整性質的檔案（Skills 清單、資源清單、研究清單等）                                 |     |
 | `raw/`              | 原始資料（文章、論文、訪談 transcript）                                       |     |
 | `trading/`           | 交易知識庫（交易日記、練習筆記、指標研究、市場觀察）                           |     |
+| `trading/trade-log.yaml` | 結構化交易紀錄（YAML，機器可解析，用於自動統計）                      |     |
 | `trading/sessions/`  | 每日交易記錄（含 P&L，已加入 `.gitignore`）                            |     |
 | `trading/screenshots/`| 交易截圖備份（Extension 匯入時自動同步，供文件引用）                    |     |
 | `trading/journal/`   | 練習筆記與覆盤心得（從交易中提煉的原則）                                  |     |
