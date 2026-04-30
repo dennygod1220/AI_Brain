@@ -3,6 +3,23 @@
 # Fields: id, date, session, direction, contracts, entry, exits[], pnl_detail, lesson_tags
 
 trades:
+  - id: "2026-04-30-002"
+    date: "2026-04-30"
+    session: "morning"
+    direction: "short"
+    contracts: 1
+    entry_price: 27560.0
+    entry_time: "10:17"
+    exit_time: "10:24"
+    exits:
+      - price: 27541.25
+        reason: "manual_close"
+        pnl: 18.75
+    pnl_total: 18.75
+    rr: null
+    entry_reason: "KDJ death cross (K=22.62 < D=30.16, J=7.54) + price broke below EMA10 & EMA30 (structure flipped bearish) + DI- 24.06 > DI+ 17.60. Trend reversal from 27,579 peak, early afternoon pullback."
+    lesson_tags: ["kdj-death-cross-entry", "ema-structure-break", "conservative-take-profit"]
+
   - id: "2026-04-30-001"
     date: "2026-04-30"
     session: "morning"
