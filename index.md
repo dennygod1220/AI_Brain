@@ -2,13 +2,13 @@
 name: index
 description: "Wiki content catalog"
 version: 1.2.1
-updated: 2026-04-29
+updated: 2026-04-30
 ---
 
 # Wiki Index
 
 > 個人數位花園的內容目錄。所有頁面經過分類與摘要。
-# 最後更新：2026-04-30 | 總頁數：40
+# 最後更新：2026-04-30 | 總頁數：41
 
 ## 🧠 Concepts
 
@@ -88,4 +88,5 @@ updated: 2026-04-29
 - [[trading/indicators/ema-kdj-ppo-adx-correlation]] — 四指標趨勢 vs 盤整行為對照表（實證分析）
 - [[trading/indicators/stochrsi-extreme-behavior]] — StochRSI 極端值行為觀察
 - [[trading/indicators/客製ADX]] — 客製ADX（含 DI 交叉 + DI 高於水平線才觸發 Alert）
+- [[trading/indicators/kdj-di-combo]] — KDJ + DI 聯動腳本（合併 Pine Script，KDJ 交叉 + DI 方向過濾，減少假 Alert）
 - [[trading/market-notes/asian-session-liquidity]] — 亞洲盤流動性模式
