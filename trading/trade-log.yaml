@@ -323,3 +323,37 @@ trades:
     rr: null
     entry_reason: "KDJ golden cross confirmed + ADX DI+=20.72 crossed above 20. Price reclaimed slow EMA. Textbook Jason's Pattern entry"
     lesson_tags: ["kdj-adx-di20-pattern", "sl-ladder-management", "j-value-plateau-exit", "pattern-representative-trade"]
+
+  - id: "2026-04-30-003"
+    date: "2026-04-30"
+    session: "night"
+    direction: "long"
+    contracts: 1
+    entry_price: 27461.25
+    entry_time: "20:11"
+    exit_time: "20:33"
+    exits:
+      - price: 27505.5
+        reason: "manual_close"
+        pnl: 44.25
+    pnl_total: 44.25
+    rr: null
+    entry_reason: "KDJ golden cross (K=59.13 > D=40.50, J=96.38) + ADX DI+=28.41 > DI-=10.80 (DI+>20, gap~17.6) + EMA structure bullish (EMA10 27454 > EMA30 27436 > EMA60 27413). Price well above all three EMAs. Jason's Pattern textbook entry."
+    lesson_tags: ["kdj-adx-di20-pattern", "j-value-extreme-exit", "textbook-pattern-entry", "perfect-night-exit"]
+
+  - id: "2026-04-30-004"
+    date: "2026-04-30"
+    session: "night"
+    direction: "long"
+    contracts: 1
+    entry_price: 27511.25
+    entry_time: "20:51"
+    exit_time: "21:30"
+    exits:
+      - price: 27516.5
+        reason: "stop_loss"
+        pnl: 5.25
+    pnl_total: 5.25
+    rr: null
+    entry_reason: "EMA10 bounce entry (27511 > EMA10 27503). Deviation from strategy: KDJ death cross at entry (K=45.87 < D=46.42), DI gap only ~3.0. Position defended by moving stop to breakeven+ after short bounce. Stopped out during 21:30 flash crash that took MNQ from 27,548 to 27,271."
+    lesson_tags: ["good-stop-management", "entry-deviation-from-strategy", "ema10-bounce-entry", "sl-to-breakeven-plus", "flash-crash-survival"]

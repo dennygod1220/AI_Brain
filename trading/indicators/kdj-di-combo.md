@@ -6,7 +6,7 @@ type: entity
 tags: [trading, indicator, mnq, technical-analysis]
 sources:
   - raw/TradingView指標-KDJ.md
-  - trading/indicators/客製ADX.md
+  - trading/indicators/di-indicator.md
 ---
 
 # KDJ + DI 聯動腳本
@@ -127,4 +127,4 @@ KDJ 比 DI 敏感（KDJ 週期 9 vs DI 週期 14），KDJ 金叉/死叉通常比
 ## 來源
 
 - KDJ 原始腳本：[[raw/TradingView指標-KDJ.md]]
-- ADX 原始腳本：[[raw/TradingView指標-客製ADX.md]] → [[trading/indicators/客製ADX]]
+- DI 原始腳本（原名客製ADX）：[[_archive/raw/TradingView指標-客製ADX.md]] → [[trading/indicators/di-indicator]]

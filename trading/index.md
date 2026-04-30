@@ -24,6 +24,7 @@ tags: [trading, index]
 - [[trading/sessions/2026-04-29-mnq-morning]] — 2026-04-29 早盤：+8pt 🟢
 - [[trading/sessions/2026-04-29-mnq-night]] — 2026-04-29 夜盤：-39.25→+77.5 = **+38.25pt** 🚀（驗證 ADX DI>20 + KDJ 模式）
 - [[trading/sessions/2026-04-30-mnq-morning]] — 2026-04-30 早盤：27,299.5→27,325.5/27,383.75 = **+110.25pt** 🚀（兩口拆分教科書 +110.25pt）
+- [[trading/sessions/2026-04-30-mnq-night]] — 2026-04-30 夜盤：27,461.25→27,505.5 +44.25pt / 27,511.25 進行中 = 本日已實現 **+173.25pt** 🚀🔥
 - [[trading/sessions/2026-04-28-mnq-morning]] — 2026-04-28 早盤：兩口多單(+14.5點) = **+14.5點** 🚀
 - [[trading/sessions/2026-04-27-mnq-night]] — 2026-04-27 夜盤：交易一(-56.5) + 交易二(+72.75) + 交易三(+11.5) = **+27.75點** 🎯
 
@@ -37,6 +38,7 @@ tags: [trading, index]
 ## 📊 Indicators（指標學習筆記）
 
 - [[trading/indicators/kdj-for-mnq]] — KDJ 指標 MNQ 實戰用法與校正後閾值
+- [[trading/indicators/di-indicator]] — DI 方向指標（原名客製ADX）：DI 交叉 + 門檻值 Alert，不含 ADX 混淆
 - [[trading/indicators/stochrsi-extreme-behavior]] — StochRSI 極端值(100/100)在強趨勢下可長時間持續
 - [[trading/indicators/adx-for-mnq]] — ADX 盤整過濾 + 多時間框架（避免盤整日雙巴）
 - [[trading/indicators/ema-kdj-ppo-adx-correlation]] — 四指標趨勢 vs 盤整行為對照表（實證分析）
@@ -49,3 +51,7 @@ tags: [trading, index]
 ## 📋 Strategy（策略文件）
 
 - [[trading/strategy/mnq-scalping-system]] — MNQ Scalping 系統策略參考：完整進出場規則、Train Mode 🚃、手機速查表
+
+## 📐 Templates（交易日記模板）
+
+- [[trading/templates/session-journal]] — 交易日記 Template：統一格式，供 Agent 自動生成 session 紀錄

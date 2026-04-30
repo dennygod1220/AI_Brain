@@ -139,6 +139,13 @@ updated: 2026-04-30
 - 建立 `trading/indicators/ema-kdj-ppo-adx-correlation.md`
 - 四大指標脫鉤現象：強趨勢下的訊號回溯
 
+## [2026-04-30] rename | 客製ADX → DI方向指標
+- `trading/indicators/客製ADX.md` → `trading/indicators/di-indicator.md`
+- 更名原因：指標核心為 DI 方向訊號，ADX 主線僅供參考
+- 同步修改：Pine Script title, 參數名 adxOver→diThresh, Alert 名稱, bgcolor 邏輯
+- 影響檔案：kdj-di-combo.md（來源連結更新）
+- 交易者需手動更新 TradingView Pine Editor + 重建 Alert
+
 ## [2026-04-30] create | KDJ + DI 聯動腳本
 - 建立 `trading/indicators/kdj-di-combo.md`
 - 合併 KDJ Pine Script + DI 方向過濾為單一腳本
@@ -151,3 +158,17 @@ updated: 2026-04-30
 - `raw/TradingView指標-KDJ.md` → `_archive/raw/`（已消化至 `kdj-di-combo.md` + `kdj-for-mnq.md`）
 - `raw/TradingView指標-客製ADX.md` → `_archive/raw/`（已消化至 `客製ADX.md` + `kdj-di-combo.md` + `adx-for-mnq.md`）
 - `raw/` 目錄已清空刪除（所有內容皆已消化或歸檔）
+
+## [2026-04-30] create | MNQ 夜盤交易記錄
+- 建立 `trading/sessions/2026-04-30-mnq-night.md`
+- 交易一（27,461.25→27,505.5）：+44.25pt ✅ — 完美符合 Jason's Pattern（KDJ金叉 + DI+28.41 >20 + DI gap 17.6）
+- 交易二（27,511.25）：+5.25pt ✅ 停損入場價上方鎖利，躲過崩盤
+- 本日已實現：早盤 +129pt + 夜盤 +49.5pt = **+178.5pt ($357)** 🚀
+- index.md 頁數更新
+- 2026-04-30 創下個人單日最佳紀錄 🏆
+
+## [2026-04-30] create | 交易日記 Template
+- 建立 `trading/templates/session-journal.md`
+- 統一格式：YAML frontmatter → 逐筆交易（進場/出場/覆盤）→ 本日總計 → 模式驗證 → 參考截圖 → 累計績效
+- 參考 4/27、4/29、4/30 三份 session 共通結構歸納
+- 含 Train Mode 出場條件對照表 + Jason's Pattern 驗證表

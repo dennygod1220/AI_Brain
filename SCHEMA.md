@@ -1,8 +1,8 @@
 ---
 name: SCHEMA
 description: "Wiki structure, conventions, and taxonomy rules"
-version: 1.4.0
-updated: 2026-04-15
+version: 1.5.1
+updated: 2026-04-30
 ---
 # Wiki Schema
 
@@ -63,23 +63,43 @@ updated: 2026-04-15
 
 ## 目錄結構
 
-| 目錄                  | 用途                                                              |     |
-| ------------------- | --------------------------------------------------------------- | --- |
-| `concepts/`         | 抽象概念、理論、定義（人類可讀版）                                               |     |
-| `entities/`         | 實體、人、組織、工具的專屬頁面                                                 |     |
-| `entities/stories/` | 原創短篇故事（md 為主，images/ 存放生圖）                                      |     |
-| `entities/skills/`  | Hermes Agent 外部技能目錄（Agent 自動掃描載入，標準格式為 `<skill-name>/SKILL.md`） |     |
-| `lists/`            | 清單彙整性質的檔案（Skills 清單、資源清單、研究清單等）                                 |     |
-| `raw/`              | 原始資料（文章、論文、訪談 transcript）                                       |     |
-| `trading/`           | 交易知識庫（交易日記、練習筆記、指標研究、市場觀察）                           |     |
-| `trading/trade-log.yaml` | 結構化交易紀錄（YAML，機器可解析，用於自動統計）                      |     |
-| `trading/sessions/`  | 每日交易記錄（含 P&L，已加入 `.gitignore`）                            |     |
-| `trading/screenshots/`| 交易截圖備份（Extension 匯入時自動同步，供文件引用）                    |     |
-| `trading/journal/`   | 練習筆記與覆盤心得（從交易中提煉的原則）                                  |     |
-| `trading/indicators/`| 技術指標學習筆記（參數設定、實戰行為觀察）                                 |     |
-| `trading/market-notes/`| 市場觀察與模式筆記（時間節點、流動性模式等）                           |     |
-| `_meta/`            | 系統元資料                                                           |     |
-| `_archive/`         | 已過时的內容                                                          |     |
+| 目錄                       | 用途                                                              |
+| ------------------------ | --------------------------------------------------------------- |
+| `concepts/`              | 抽象概念、理論、定義（人類可讀版）                                               |
+| `entities/`              | 實體、人、組織、工具的專屬頁面                                                 |
+| `entities/stories/`      | 原創短篇故事（md 為主，images/ 存放生圖）                                      |
+| `entities/skills/`       | Hermes Agent 外部技能目錄（Agent 自動掃描載入，標準格式為 `<skill-name>/SKILL.md`） |
+| `lists/`                 | 清單彙整性質的檔案（Skills 清單、資源清單、研究清單等）                                 |
+| `raw/`                   | 原始資料（文章、論文、訪談 transcript）                                       |
+| `trading/`               | 交易知識庫（交易日記、練習筆記、指標研究、市場觀察）                                      |
+| `trading/trade-log.yaml` | 結構化交易紀錄（YAML，機器可解析，用於自動統計）                                      |
+| `trading/sessions/`      | 每日交易記錄（含 P&L，已加入 `.gitignore`）                                  |
+| `trading/screenshots/`   | 交易截圖備份（Extension 匯入時自動同步，供文件引用）                                 |
+| `trading/journal/`       | 練習筆記與覆盤心得（從交易中提煉的原則）                                            |
+| `trading/indicators/`    | 技術指標學習筆記（參數設定、實戰行為觀察）                                           |
+| `trading/market-notes/`  | 市場觀察與模式筆記（時間節點、流動性模式等）                                          |
+| `_meta/`                 | 系統元資料                                                           |
+| `_archive/`              | 已過时的內容                                                          |
+
+### 交易日記格式規範（Session Journals）
+
+`trading/sessions/` 下的每日交易記錄需遵循以下結構。Agent 應使用 [[trading/templates/session-journal]] 作為參考模板生成：
+
+**單筆交易的區段順序（依此排列）：**
+
+1. **交易標題** — `## 交易一（方向×口數）：PnL + 表情符號`
+2. **進場明細表** — 方向、口數、進場價格與時間、出場價格與時間、損益、持倉時間
+3. **進場邏輯** — KDJ交叉狀態/數值、ADX DI+/DI- 數值與 gap、EMA 結構、市場情境
+4. **📸 進場截圖** — `![[trading/screenshots/xxx.png]]` + 一句描述
+5. **持倉過程截圖**（如有）— 中間追蹤的截圖，按時間順序排列
+6. **出場分析** — 出場原因、Train Mode 條件對照表（🅰️🅱️🅲🅳）
+7. **📸 出場截圖** — `![[trading/screenshots/xxx.png]]` + 一句描述
+8. **覆盤** — 做對的 ✅ / 可以改進的 ⚠️ / 教訓 💡
+
+**YAML frontmatter 必須包含：**
+- `title`, `date`, `product: MNQ1!`, `timeframe: 3分K`, `pnl`, `session: morning|night`, `tags`, `sources`（所有引用截圖的路徑）
+
+**多筆交易時**：每筆交易獨立一個區段，各自包含上述 2~8 項。
 
 > **注意：** `entities/skills/` 為 Hermes Agent 的外部技能目錄。需在 `~/.hermes/config.yaml` 中設定：
 > ```yaml
