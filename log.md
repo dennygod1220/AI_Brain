@@ -473,3 +473,12 @@ updated: 2026-04-20
 - 完整收錄：圖表配置、進場5層篩選、兩口拆分+Train Mode 🚃 出場規則、盤整辨識、口數決策、8條原則、關鍵數字速查、亞洲盤時間節點
 - 手機友善格式，盤中可快速查閱
 - index.md 頁數 38→39，trading/index.md 新增 Strategy 分類
+
+## [2026-04-30] update | trading/indicators — 客製ADX（新增 DI 交叉 Alert 條件）
+- 新增: `trading/indicators/客製ADX.md`
+- 基於 `raw/TradingView指標-客製ADX.md` 原始版擴充
+- 新增 `alertcondition("ADX 多頭交叉")`：+DI 上穿 -DI **且 DI 值高於水平線**
+- 新增 `alertcondition("ADX 空頭交叉")`：-DI 上穿 +DI **且 DI 值高於水平線**
+- 新增 `plotshape` 圖表標記（綠色 ▲ / 紅色 ▼）
+- raw/ 還原為原始版本（保持不可變性）
+- index.md 頁數 39→40
