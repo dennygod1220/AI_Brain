@@ -61,6 +61,8 @@ updated: 2026-04-30
 
 - [[docs/plans/2026-04-27-tradingview-chrome-extension]] — TradingView Chrome Extension 截圖分析系統：13 Task 實作計畫（Extension MVP → Hermes 整合 → 打磨）
 - [[docs/plans/2026-05-02-mnq-jasons-pattern-backtest-engine]] — Jason's Pattern 自動回測引擎：yfinance 歷史回測、參數優化、策略發現（Phase 1: 回測→Phase 2: 優化→Phase 3: 即時通知）
+- [[docs/plans/comfyui-workflow-plugin-modification-plan]] — ComfyUI Workflow Plugin 修改計畫：6 大 bug 問題分析與修復優先級
+- [[docs/plans/TradingView 警報 Hermes Webhook 分析系統]] — TV 警報 → Hermes Webhook 即時分析系統設計
 
 ## 🧪 Testing
 
