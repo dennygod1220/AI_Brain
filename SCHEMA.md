@@ -1,8 +1,8 @@
 ---
 name: SCHEMA
 description: "Wiki structure, conventions, and taxonomy rules"
-version: 1.5.1
-updated: 2026-04-30
+version: 1.6.0
+updated: 2026-05-03
 ---
 # Wiki Schema
 
@@ -39,17 +39,55 @@ updated: 2026-04-30
 - #extension: 軟體擴充套件研究與分析（SillyTavern 等）
 - #story: 原創短篇故事、文學創作
 - #agent-ecosystem: AI Agent 生態系、Skills 清單、社群資源彙整
+- #productivity: 生產力工具與工作流程
+- #automation: 自動化流程
+- #memory: 記憶系統相關
+- #template: 模板與格式規範
 
-### 自動擴充標籤 (Auto-generated)
-- #setup-guide: 軟體/工具安裝設定指南
-- #wsl: Windows Subsystem for Linux 相關
-- #chrome: Google Chrome 瀏覽器相關
+### Hermes / Agent 生態系 (Hermes Ecosystem)
+- #Hermes: Hermes Agent 相關
+- #HermesAgent: Hermes Agent 專指
+- #hermes-agent: (小寫連字符 variant)
+- #hermes-skill: Hermes Skill 技能
+- #hermes: (小寫 variant)
+- #NousResearch: Nous Research 組織
+- #Agent-Ecosystem: AI Agent 生態系
+- #AgentSkillsIO: Agent Skills I/O 系統
+- #AgentTools: Agent 工具集
+- #Skills: Skills 系統
+- #tool: 通用工具
+- #Multi-Agent: 多 Agent 協作
+- #Discord: Discord 平台
+- #Discord.py: Discord.py 程式庫
+- #Bot: 機器人
+- #cron: 排程任務
+- #mcp: Model Context Protocol
+- #plugin: 外掛/插件
+- #Plugins: (大寫 variant)
+- #Systemd: Systemd 服務管理
+- #Bug-Fix: Bug 修復
+- #python: Python 程式語言
+- #Python: (大寫 variant)
+- #Extensions: 擴充套件
+- #Webhook: Webhook 相關
 
-### 交易專用標籤 (Trading Domain)
+### 圖像生成 / SillyTavern (Image Generation)
+- #Illustrious: Illustrious XL 模型
+- #illustrious: (小寫 variant)
+- #SDXL: Stable Diffusion XL
+- #Stable Diffusion: Stable Diffusion 生態
+- #image-generation: 圖像生成
+- #flux2: Flux.2 模型
+- #comfyui: ComfyUI 工作流
+- #sillytavern: SillyTavern 平台
+- #bettersimtracker: BetterSimTracker 工具
+- #macro: 巨集 / 快捷指令
+- #圖像生成: (中文標籤)
+
+### 交易擴充 (Trading Extras)
 - #trading: 交易相關通用標籤
 - #mnq: Micro E-mini Nasdaq-100 期貨
 - #session: 每日交易記錄
-- #learning: 交易學習與練習筆記
 - #indicator-calibration: 指標參數校正
 - #trap: 交易陷阱與教訓
 - #warning-signal: 預警訊號觀察
@@ -57,6 +95,37 @@ updated: 2026-04-30
 - #session-patterns: 時間/時段模式
 - #technical-analysis: 技術分析
 - #review: 交易覆盤
+- #strategy: 交易策略
+- #indicator: 技術指標
+- #stochrsi: StochRSI 指標
+- #backtesting: 回測
+- #finviz: Finviz 工具
+- #reference: 參考資料
+- #chart: 圖表
+- #meta: 元資料
+
+### 技術 / 系統 (Technical & System)
+- #wsl: Windows Subsystem for Linux 相關
+- #setup-guide: 軟體/工具安裝設定指南
+- #chrome: Google Chrome 瀏覽器相關
+- #WSL: (大寫 variant)
+- #DNS: DNS 相關
+- #Network: 網路
+- #Windows: Windows 系統
+- #prompt-engineering: Prompt 工程
+- #Prompt Engineering: (space variant)
+- #error-sanitizer: 錯誤清理器
+- #output-log: 輸出日誌
+- #artifact: 工作成果 / Artifact
+- #profile-aware: Profile 感知
+- #state-machine: 狀態機
+
+### 創作與個人 (Creative & Personal)
+- #short-story: 短篇故事
+- #nostalgia: 懷舊主題
+- #taiwanese: 台灣相關
+- #vinyl: 黑膠唱片
+- #AI: 人工智慧
 
 ## Page Thresholds
 - **Create a page**: 當一個概念在 2+ 原始來源出現，或是是一個新的想法時
