@@ -1,7 +1,7 @@
 ---
 title: Chrome MCP WSL 連線設定
 created: 2026-05-03
-updated: 2026-05-03
+updated: 2026-05-03-2
 type: entity
 tags: [hermes-agent, chrome, mcp, wsl, workflow, setup-guide]
 sources: []
@@ -180,7 +180,175 @@ WSL2 的 `localhost` 指向 WSL 虛擬機本身，**不指向 Windows 主機**�
 | Port 變動 | Chrome 重啟或切換 profile 後 debug port 會變 | 重新執行 portproxy 命令 + `/reload-mcp` |
 | UUID 變動 | Chrome 重啟後 WebSocket UUID 改變 | `ws-endpoint.sh` 動態讀取，無需手動處理 |
 | Network.enable 超時 | 分頁過多時初始化超時 | `--no-category-network` 旗標 |
+| **_rpc_lock 死結（已修復）** | Hermes 重啟後所有 chrome MCP tool call 全部 timeout | 見下方「_rpc_lock 死結問題詳解」 |
 | 安全提醒 | 遠端除錯開啟後，外部應用可完整控制瀏覽器 | 僅在可信環境使用 |
+
+---
+
+## `_rpc_lock` 死結問題詳解（2026-05-03 發現並修復）
+
+### 問題症狀
+
+Hermes Agent session 重啟後，`mcp_chrome_list_pages` 以及所有其他 chrome MCP tool call 全部**無限 hang 住**，最終在 **120 秒後**回傳 `MCP call failed: TimeoutError`。
+
+### 環境
+
+- Hermes Agent（WSL2）
+- chrome-devtools-mcp v0.23.0（Node.js）
+- Windows 11 Chrome 147+
+- MCP Python SDK 1.27.0
+
+### 診斷過程
+
+#### 測試 1：chrome-devtools-mcp 直接運作 ✅
+
+手動透過 stdio pipe 執行 chrome-devtools-mcp 並發送 JSON-RPC request，**0.5 秒內正常回應**，24 個 tools 全部可呼叫。
+
+```bash
+/root/.hermes/node/bin/chrome-devtools-mcp \
+  --wsEndpoint "ws://172.27.16.1:52785/devtools/browser/..." \
+  --no-category-network --no-category-performance
+# → tools/list: 0.5s, tools/call list_pages: 3.3s
+```
+
+#### 測試 2：hermes mcp test chrome 成功 ✅
+
+```bash
+hermes mcp test chrome
+# ✓ Connected (833ms)
+# ✓ Tools discovered: 24
+```
+
+獨立測試 session 完全正常。
+
+#### 測試 3：WebSocket 連線穩定性 ✅
+
+直接 Python CDP WebSocket 連線，開著等 **60 秒 idle** 後再發命令，**完全正常**：
+
+```
+Browser.getVersion → "Chrome/147.0.7727.138" (idle 60s 後仍正常)
+```
+
+排除 portproxy 連線不穩定的可能性。
+
+#### 測試 4：完整的 MCP 初始化流程 ✅
+
+手動模擬 Hermes 的完整 MCP 連線流程（initialize → notifications/initialized → tools/list → tools/call list_pages），正常完成。
+
+#### 測試 5：問題重現 🔴
+
+在 Hermes session 內呼叫 `mcp_chrome_list_pages`，回傳 `TimeoutError`（空訊息）。此時檢查：
+
+| 狀態 | 結果 |
+|------|------|
+| MCP 子進程 | 存活（PID 1583420，fd 0/1 pipe 正常） |
+| WebSocket socket | ESTABLISHED（fd 21 → 172.27.16.1:52785） |
+| agent.log | "registered 28 tool(s)" 成功 |
+| errors.log | "MCP tool chrome/list_pages call failed: "（空訊息） |
+
+### 根因分析
+
+#### 抓到了：`_rpc_lock` 死結
+
+Hermes 的 MCP 客戶端程式碼在 `/root/.hermes/hermes-agent/tools/mcp_tool.py` 中有一個 `_rpc_lock`（`asyncio.Lock()`），用來序列化所有對 MCP 子程序的 JSON-RPC 請求：
+
+```python
+# tools/mcp_tool.py line 2024-2026
+async def _call():
+    async with server._rpc_lock:
+        result = await server.session.call_tool(tool_name, arguments=args)
+```
+
+同時，MCP SDK 支援 notification 處理機制。當 chrome-devtools-mcp 初始化完成後，會發送 `ToolListChangedNotification` 給客戶端：
+
+```python
+# tools/mcp_tool.py line 932-966 — message handler
+case ToolListChangedNotification():
+    self._schedule_tools_refresh()  # 建立 background task
+```
+
+背景 task 執行時會呼叫 `_refresh_tools()`，而這個方法**也持有 `_rpc_lock`**：
+
+```python
+# tools/mcp_tool.py line 982-984 (修復前)
+async with self._rpc_lock:
+    tools_result = await self.session.list_tools()
+```
+
+**關鍵問題**：`session.list_tools()` 沒有 timeout。如果它 hang 住（在背景 context 中確實會發生 — 推測與 MCP SDK 的 `_receive_loop` 競爭條件有關），`_rpc_lock` 就永遠不釋放。所有後續的 `session.call_tool()` 都在 `async with server._rpc_lock` 這一行死等，直到 Hermes 的 120 秒外層 timeout 炸掉。
+
+#### 發生時序
+
+```
+Hermes 啟動
+  │
+  ├─ _run_stdio() 啟動 MCP 子進程
+  │    │
+  │    ├─ session.initialize()  ✓
+  │    ├─ _discover_tools() → list_tools()  ✓ (tools 註冊成功)
+  │    │     └─ 此時 chrome-devtools-mcp 發出 ToolListChangedNotification
+  │    │           └─ message handler 排程 _schedule_tools_refresh()
+  │    │                 └─ background task 排隊中...
+  │    ├─ _ready.set()
+  │    └─ _wait_for_lifecycle_event()
+  │
+  ├─ [背景 task 開始執行]
+  │    └─ _refresh_tools() 取得 _rpc_lock
+  │         └─ session.list_tools()  →  HANG ❌
+  │              └─ _rpc_lock 永遠被持有
+  │
+  └─ 使用者發送 mcp_chrome_list_pages
+       └─ _call() → async with _rpc_lock → 永遠等待 ❌
+            └─ 120 秒後 → TimeoutError
+```
+
+### 修復方式
+
+#### 修改內容
+
+在 `/root/.hermes/hermes-agent/tools/mcp_tool.py` 的 `_refresh_tools()` 中，對 `session.list_tools()` 加上 **15 秒 timeout**：
+
+```python
+# 修復後 (mcp_tool.py ~line 982)
+async with self._rpc_lock:
+    try:
+        tools_result = await asyncio.wait_for(
+            self.session.list_tools(), timeout=15,
+        )
+    except asyncio.TimeoutError:
+        logger.warning(
+            "MCP server '%s': tool refresh timed out — "
+            "releasing _rpc_lock so tool calls can proceed",
+            self.name,
+        )
+        return
+```
+
+#### 原理
+
+- 如果 `list_tools()` 在背景 context 下 hang 住，15 秒後 timeout
+- timeout 後 `_rpc_lock` 正常釋放（`async with` block 結束）
+- 後續的 tool call 可以正常取得 lock 並執行
+- background refresh 失敗只是暫時的 — 下次 notification 到來時會再觸發
+
+#### 重新套用（Hermes 更新後）
+
+Hermes 更新（`git pull`）會覆蓋 `mcp_tool.py`。重新套用 patch：
+
+```bash
+python3 /root/.hermes/profiles/stock_master/skills/my-hermes-skills/chrome-mcp-wsl-windows/scripts/patch-mcp-rpc-lock.py
+```
+
+這個 script 會偵測 patch 是否已套用，避免重複修改。
+
+### 相關檔案
+
+| 檔案 | 用途 |
+|------|------|
+| `entities/chrome-mcp-wsl-setup.md` | 本文件 — Chrome MCP 設定 + 已知問題 |
+| `/root/.hermes/hermes-agent/tools/mcp_tool.py` | Hermes MCP 客戶端（已 patch） |
+| skills `chrome-mcp-wsl-windows/scripts/patch-mcp-rpc-lock.py` | 可重複執行的 patch script |
+| skills `chrome-mcp-wsl-windows/SKILL.md` | 技能文件（Known Issues 章節） |
 
 ## 參考連結
 

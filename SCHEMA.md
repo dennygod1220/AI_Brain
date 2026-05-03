@@ -41,7 +41,9 @@ updated: 2026-04-30
 - #agent-ecosystem: AI Agent 生態系、Skills 清單、社群資源彙整
 
 ### 自動擴充標籤 (Auto-generated)
-- (將由 Agent 根據內容動態新增)
+- #setup-guide: 軟體/工具安裝設定指南
+- #wsl: Windows Subsystem for Linux 相關
+- #chrome: Google Chrome 瀏覽器相關
 
 ### 交易專用標籤 (Trading Domain)
 - #trading: 交易相關通用標籤

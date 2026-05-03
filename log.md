@@ -199,3 +199,10 @@ updated: 2026-04-30
 - 原因：用戶要求刪除
 - `index.md`: 移除條目，頁數 45→44
 - `docs/plans/2026-05-02-mnq-jasons-pattern-backtest-engine.md`: wikilink 改為純文字 + (已歸檔)
+
+## [2026-05-03] update | chrome-mcp-wsl-setup — MCP _rpc_lock 死結修復紀錄
+- `entities/chrome-mcp-wsl-setup.md`: 新增「_rpc_lock 死結問題詳解」章節
+- Root cause: `_refresh_tools()` 中的 `list_tools()` 無 timeout，在背景 task 中 hang 住後永久佔有 `_rpc_lock`，導致所有 tool call 死等 120 秒
+- Fix: 對 `list_tools()` 加上 15 秒 `asyncio.wait_for` timeout
+- 相關檔案：`/root/.hermes/hermes-agent/tools/mcp_tool.py`（已 patch）、`chrome-mcp-wsl-windows/scripts/patch-mcp-rpc-lock.py`（可重複執行）
+- 更新 index.md: 無（條目已存在）

@@ -1,10 +1,11 @@
 ---
 title: 第二次超賣/超買陷阱
 created: 2026-04-27
-updated: 2026-04-27
+updated: 2026-05-03
 type: journal
 tags: [trading, mnq, kdj, trap, learning]
 related-sessions: [trading/sessions/2026-04-27-mnq-morning]
+sources: [trading/sessions/2026-04-27-mnq-morning]
 confidence: medium
 ---
 

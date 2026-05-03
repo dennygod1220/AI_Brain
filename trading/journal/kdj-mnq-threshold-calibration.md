@@ -1,10 +1,11 @@
 ---
 title: KDJ 在 MNQ 的閾值校正
 created: 2026-04-27
-updated: 2026-04-27
+updated: 2026-05-03
 type: journal
 tags: [trading, mnq, kdj, indicator-calibration, learning]
 related-sessions: [trading/sessions/2026-04-27-mnq-morning]
+sources: [trading/sessions/2026-04-27-mnq-morning]
 confidence: medium
 ---
 

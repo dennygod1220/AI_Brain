@@ -1,10 +1,11 @@
 ---
 title: EMA 三線坍縮 = 無效壓力牆
 created: 2026-04-27
-updated: 2026-04-27
+updated: 2026-05-03
 type: journal
 tags: [trading, mnq, ema, warning-signal, learning]
 related-sessions: [trading/sessions/2026-04-27-mnq-morning]
+sources: [trading/sessions/2026-04-27-mnq-morning]
 confidence: medium
 ---
 

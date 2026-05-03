@@ -1,10 +1,11 @@
 ---
 title: StochRSI 極端值行為觀察
 created: 2026-04-27
-updated: 2026-04-27
+updated: 2026-05-03
 type: indicator
 tags: [trading, mnq, stochrsi, technical-analysis]
 related-sessions: [trading/sessions/2026-04-27-mnq-morning]
+sources: [trading/sessions/2026-04-27-mnq-morning]
 confidence: medium
 ---
 

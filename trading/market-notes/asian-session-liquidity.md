@@ -1,9 +1,10 @@
 ---
 title: 亞洲盤流動性模式
 created: 2026-04-27
-updated: 2026-04-27
+updated: 2026-05-03
 type: market-note
 tags: [trading, mnq, market-structure, session-patterns]
+sources: [trading-experience]
 confidence: low
 ---
 

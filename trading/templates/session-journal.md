@@ -1,9 +1,10 @@
 ---
 title: 交易日記 Template
 created: 2026-04-30
-updated: 2026-04-30
+updated: 2026-05-03
 type: template
 tags: [trading, template, meta]
+sources: []
 ---
 
 # 交易日記 Template
