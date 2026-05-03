@@ -1,7 +1,7 @@
 ---
 name: SCHEMA
 description: "Wiki structure, conventions, and taxonomy rules"
-version: 1.6.0
+version: 1.6.1
 updated: 2026-05-03
 ---
 # Wiki Schema
@@ -15,6 +15,7 @@ updated: 2026-05-03
 - **Frontmatter**: 每頁必須包含 YAML 區塊 (title, created, updated, type, tags, sources)
 - **Updates**: 修改內容後必須更新 `updated` 日期，並在 `log.md` 紀錄
 - **Index**: 建立或刪除任何頁面後，必須同步更新 `index.md`（新增條目 / 移除條目）
+- **Sub-index**: 若子目錄擁有自己的 `index.md`（如 `trading/index.md`），該目錄下的內容由子 index 管理，主 `index.md` 可省略其條目或僅保留一條交叉引用
 - **Archiving**: 移出舊的內容請移至 `_archive/` 並刪除索引
 
 ## Tag Taxonomy (極度寬鬆且具備高擴充性)
