@@ -270,3 +270,4 @@ python3.12 main.py
 - [[concepts/hermes-agent-soul-craft]] — Hermes Agent 人格設計
 - [[lists/hermes-agent-ecosystem]] — Hermes Agent 生態系
 - [[docs/plans/2026-04-27-tradingview-chrome-extension]] — 實作計畫
+- [[docs/plans/2026-05-02-mnq-jasons-pattern-backtest-engine]] — Jason's Pattern 自動回測引擎計畫

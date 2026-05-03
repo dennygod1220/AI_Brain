@@ -8,7 +8,7 @@ updated: 2026-04-30
 # Wiki Index
 
 > 個人數位花園的內容目錄。所有頁面經過分類與摘要。
-# 最後更新：2026-05-03 | 總頁數：45
+# 最後更新：2026-05-03 | 總頁數：44
 
 ## 🧠 Concepts
 
@@ -55,7 +55,6 @@ updated: 2026-04-30
 
 ## 🚀 Projects
 
-- [[entities/projects/trading-assistant-system]] — 自動化交易輔助系統：市場資料蒐集、技術指標計算、策略回測與績效評估（僅供學習研究）
 - [[entities/projects/us-market-daily-skill]] — 美股事件每日 Discord 推送：finviz HTML JSON 解析、UTC/ET 時區跨日修復、Fed 事件嚴格分類
 
 ## 📋 Plans

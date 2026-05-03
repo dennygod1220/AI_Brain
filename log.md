@@ -193,3 +193,9 @@ updated: 2026-04-30
 - `trading/index.md`: 修復 `[[trading/trade-log]]` 斷鏈，改為可解析的 `trading/trade-log.yaml`
 - `trading/indicators/kdj-di-combo.md`: `sources` 與內文 `raw/` 路徑更新為 `_archive/raw/`
 - `entities/chrome-mcp-wsl-setup.md`: 修復 `[[chrome-devtools-mcp]]` 斷鏈，改為純文字引用
+
+## [2026-05-03] archive | trading-assistant-system
+- `entities/projects/trading-assistant-system.md` → `_archive/entities/projects/`
+- 原因：用戶要求刪除
+- `index.md`: 移除條目，頁數 45→44
+- `docs/plans/2026-05-02-mnq-jasons-pattern-backtest-engine.md`: wikilink 改為純文字 + (已歸檔)
