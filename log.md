@@ -1,8 +1,8 @@
 ---
 name: log
 description: "Chronological record of all wiki actions"
-version: 1.1.0
-updated: 2026-04-30
+version: 1.2.0
+updated: 2026-05-03
 ---
 
 ## 2026-04-15
@@ -206,3 +206,17 @@ updated: 2026-04-30
 - Fix: 對 `list_tools()` 加上 15 秒 `asyncio.wait_for` timeout
 - 相關檔案：`/root/.hermes/hermes-agent/tools/mcp_tool.py`（已 patch）、`chrome-mcp-wsl-windows/scripts/patch-mcp-rpc-lock.py`（可重複執行）
 - 更新 index.md: 無（條目已存在）
+
+## [2026-05-03] lint | 全面體檢 + 修復
+- 檢查目標：44 個 wiki 頁面，8 大面向
+- 發現項目：
+  - 斷鏈：5 個指向 `_archive/raw/` 的 wikilink（均為有效檔案，false positive）
+  - 索引缺失：2 個 plan 檔不在 index（已修復）
+  - 缺少 Frontmatter：3 個 plan 檔案（已修復，僅磁碟層級，gitignored）
+  - 缺少 sources 欄位：6 個 trading 頁面（已修復）
+  - 巨頁面（>200 行）：9 個（TV extension plan 1170 行最優先）
+  - 未登錄標籤：63 個 → SCHEMA.md tag taxonomy 已擴充（30→~100 tags）
+  - 低 confidence：1 頁（asian-session-liquidity，已標記）
+  - 單來源無 confidence：6 頁（建議使用者檢視）
+- SCHEMA.md 升級至 v1.6.0，新增 5 個分類
+- log.md 升級至 v1.2.0
