@@ -8,7 +8,7 @@ updated: 2026-04-30
 # Wiki Index
 
 > 個人數位花園的內容目錄。所有頁面經過分類與摘要。
-# 最後更新：2026-04-30 | 總頁數：41
+# 最後更新：2026-05-03 | 總頁數：45
 
 ## 🧠 Concepts
 
@@ -29,6 +29,7 @@ updated: 2026-04-30
 - [[entities/hermes/hermes-gateway-systemd-fix]] — Hermes Gateway Systemd 服務修復：UV Python 路徑衝突 + Systemd Override 解法
 - [[entities/hermes/hermes-multiagent-discord-system]] — Hermes 雙 Agent Discord 協作系統：6 階段修復 + 3 大核心 discord.py 修改
 - [[entities/skills/autonomous-ai-agents/hermes-skills-system/SKILL.md]] — Hermes Skills System v1.0.0：技能結構、Progressive Disclosure、Skills Hub、外部技能目錄、skill_manage
+- [[entities/chrome-mcp-wsl-setup]] — Chrome MCP WSL 連線設定
 
 ## 📋 Lists
 
@@ -60,6 +61,7 @@ updated: 2026-04-30
 ## 📋 Plans
 
 - [[docs/plans/2026-04-27-tradingview-chrome-extension]] — TradingView Chrome Extension 截圖分析系統：13 Task 實作計畫（Extension MVP → Hermes 整合 → 打磨）
+- [[docs/plans/2026-05-02-mnq-jasons-pattern-backtest-engine]] — Jason's Pattern 自動回測引擎：yfinance 歷史回測、參數優化、策略發現（Phase 1: 回測→Phase 2: 優化→Phase 3: 即時通知）
 
 ## 🧪 Testing
 
@@ -75,6 +77,7 @@ updated: 2026-04-30
 - [[trading/sessions/2026-04-29-mnq-morning]] — 2026-04-29 早盤：+8pt 🟢
 - [[trading/sessions/2026-04-29-mnq-night]] — 2026-04-29 夜盤：**+38.25pt** 🚀（模式驗證 +77.5pt 代表作）
 - [[trading/sessions/2026-04-30-mnq-morning]] — 2026-04-30 早盤：**+110.25pt** 🚀（兩口拆分教科書，trade-log 單筆最高）
+- [[trading/sessions/2026-04-30-mnq-night]] — 2026-04-30 夜盤：+44.25+5.25 = **+49.5pt** 💰🔥
 - [[trading/strategy/mnq-scalping-system]] — MNQ Scalping 策略參考文件：完整進出場規則、Train Mode 🚃、手機速查表
 - [[trading/sessions/2026-04-28-mnq-morning]] — 2026-04-28 早盤 MNQ 交易記錄：+14.5 點 🚀
 - [[trading/sessions/2026-04-27-mnq-morning]] — 2026-04-27 早盤 MNQ 交易記錄：+37 點
@@ -87,6 +90,8 @@ updated: 2026-04-30
 - [[trading/indicators/adx-for-mnq]] — ADX 盤整過濾 + 多時間框架（避免盤整日雙巴）
 - [[trading/indicators/ema-kdj-ppo-adx-correlation]] — 四指標趨勢 vs 盤整行為對照表（實證分析）
 - [[trading/indicators/stochrsi-extreme-behavior]] — StochRSI 極端值行為觀察
-- [[trading/indicators/客製ADX]] — 客製ADX（含 DI 交叉 + DI 高於水平線才觸發 Alert）
+- [[trading/indicators/di-indicator]] — DI 方向指標（原名客製ADX）：DI 交叉 + 門檻值 Alert
 - [[trading/indicators/kdj-di-combo]] — KDJ + DI 聯動腳本（合併 Pine Script，KDJ 交叉 + DI 方向過濾，減少假 Alert）
 - [[trading/market-notes/asian-session-liquidity]] — 亞洲盤流動性模式
+- [[trading/market-notes/cme-data-pricing]] — CME 即時數據訂閱方案與費用比較
+- [[trading/templates/session-journal]] — 交易日記 Template：統一格式供 Agent 自動生成

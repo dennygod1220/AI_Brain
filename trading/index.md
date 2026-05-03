@@ -17,7 +17,7 @@ tags: [trading, index]
 
 > ⚠️ 此目錄包含個人交易盈虧紀錄，由 `.gitignore` 排除版本控制。
 
-- [[trading/trade-log]] — 結構化交易紀錄（機器可解析，用於自動統計）
+- trading/trade-log.yaml — 結構化交易紀錄（YAML，機器可解析，用於自動統計）
 
 > ⚠️ 以下為人類可讀版交易日記：
 

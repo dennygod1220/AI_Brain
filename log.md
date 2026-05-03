@@ -172,3 +172,24 @@ updated: 2026-04-30
 - 統一格式：YAML frontmatter → 逐筆交易（進場/出場/覆盤）→ 本日總計 → 模式驗證 → 參考截圖 → 累計績效
 - 參考 4/27、4/29、4/30 三份 session 共通結構歸納
 - 含 Train Mode 出場條件對照表 + Jason's Pattern 驗證表
+
+## [2026-05-02] create | docs/plans — Jason's Pattern 自動回測引擎
+- 建立 `docs/plans/2026-05-02-mnq-jasons-pattern-backtest-engine.md`
+- 三階段計畫：Phase 1 回測引擎 → Phase 2 參數優化器 → Phase 3 即時通知骨架
+- 使用 yfinance 拉 NQ=F 歷史資料，Python 實作 KDJ / DI+/DI- / EMA 計算
+- Grid Search 參數優化防 overfitting
+- 相關：[[trading/strategy/mnq-scalping-system]], [[entities/projects/trading-assistant-system]]
+- 更新 index.md: 新增 Plans 條目
+
+## [2026-05-03] create | Chrome MCP WSL 連線設定
+- 建立 `entities/chrome-mcp-wsl-setup.md` — 從 WSL 連線到 Windows Chrome 的完整架設指南
+- 涵蓋：防火牆規則、portproxy、ws-endpoint.sh 動態腳本、WebSocket 端點（Chrome 144+ 不走 HTTP CDP）
+- 記錄排錯過程：svchost 搶佔 port 9222、Network.enable 超時（分頁過多）、Chrome profile 切換 port 變動
+- 更新 index.md: Entities 新增 chrome-mcp-wsl-setup 條目，頁數 41→42
+
+## [2026-05-03] fix | lint 修復：index 斷鏈 + 缺失條目
+- `index.md`: 修復 `客製ADX`→`di-indicator` 斷鏈連結（`#92`)
+- `index.md`: 補上 `2026-04-30-mnq-night`、`cme-data-pricing`、`templates/session-journal`（頁數 42→45）
+- `trading/index.md`: 修復 `[[trading/trade-log]]` 斷鏈，改為可解析的 `trading/trade-log.yaml`
+- `trading/indicators/kdj-di-combo.md`: `sources` 與內文 `raw/` 路徑更新為 `_archive/raw/`
+- `entities/chrome-mcp-wsl-setup.md`: 修復 `[[chrome-devtools-mcp]]` 斷鏈，改為純文字引用
